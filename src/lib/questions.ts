@@ -1,3 +1,4 @@
+
 import type { Question } from './types';
 
 export const questions: Question[] = [
@@ -2514,5 +2515,1925 @@ export const questions: Question[] = [
     ],
     correctOptionId: 'gst112-q202o2',
     topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q203',
+    text: "What approximate percentage of Nigeria's population do the three major ethnic groups (Hausa/Fulani, Yoruba, and Igbo) represent?",
+    options: [
+        { id: 'gst112-q203o1', text: '50%' },
+        { id: 'gst112-q203o2', text: '60%' },
+        { id: 'gst112-q203o3', text: '70%' },
+        { id: 'gst112-q203o4', text: '80%' }
+    ],
+    correctOptionId: 'gst112-q203o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q204',
+    text: 'The Fulani people who have settled in Hausa cities and adopted their culture are an example of:',
+    options: [
+        { id: 'gst112-q204o1', text: 'Cultural relativism' },
+        { id: 'gst112-q204o2', text: 'Assimilation' },
+        { id: 'gst112-q204o3', text: 'Ethnocentrism' },
+        { id: 'gst112-q204o4', text: 'Innovation' }
+    ],
+    correctOptionId: 'gst112-q204o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q205',
+    text: 'Which Yoruba sub-group is considered the spiritual head of the Yoruba people?',
+    options: [
+        { id: 'gst112-q205o1', text: 'Oyo' },
+        { id: 'gst112-q205o2', text: 'Ife' },
+        { id: 'gst112-q205o3', text: 'Ijebu' },
+        { id: 'gst112-q205o4', text: 'Egba' }
+    ],
+    correctOptionId: 'gst112-q205o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q206',
+    text: 'Igbo traditional society is often described as:',
+    options: [
+        { id: 'gst112-q206o1', text: 'Highly centralized' },
+        { id: 'gst112-q206o2', text: 'Egalitarian and segmented' },
+        { id: 'gst112-q206o3', text: 'Theocratic' },
+        { id: 'gst112-q206o4', text: 'Feudal' }
+    ],
+    correctOptionId: 'gst112-q206o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q207',
+    text: 'According to scholars, a society is characterized by all of the following EXCEPT:',
+    options: [
+        { id: 'gst112-q207o1', text: 'A reasonably large population' },
+        { id: 'gst112-q207o2', text: 'A common language for all members' },
+        { id: 'gst112-q207o3', text: 'Living together in a geographical area' },
+        { id: 'gst112-q207o4', text: 'Common political and economic interests' }
+    ],
+    correctOptionId: 'gst112-q207o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q208',
+    text: 'The term "culture" was first coined by which English anthropologist?',
+    options: [
+        { id: 'gst112-q208o1', text: 'Malinowski' },
+        { id: 'gst112-q208o2', text: 'Redfield' },
+        { id: 'gst112-q208o3', text: 'Taylor' },
+        { id: 'gst112-q208o4', text: 'Schaefer' }
+    ],
+    correctOptionId: 'gst112-q208o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q209',
+    text: 'Which of these definitions best describes culture as a "social heritage"?',
+    options: [
+        { id: 'gst112-q209o1', text: 'The handwork of man' },
+        { id: 'gst112-q209o2', text: 'The sum total of learned, socially transmitted behavior' },
+        { id: 'gst112-q209o3', text: 'The complex whole which includes knowledge, belief, and art' },
+        { id: 'gst112-q209o4', text: 'The identity of the people, including customs and philosophy' }
+    ],
+    correctOptionId: 'gst112-q209o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q210',
+    text: "The belief that one's own cultural group is superior to others is known as:",
+    options: [
+        { id: 'gst112-q210o1', text: 'Cultural relativism' },
+        { id: 'gst112-q210o2', text: 'Cultural universal' },
+        { id: 'gst112-q210o3', text: 'Ethnocentrism' },
+        { id: 'gst112-q210o4', text: 'Symbolic culture' }
+    ],
+    correctOptionId: 'gst112-q210o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q211',
+    text: "Trying to appreciate other groups' ways of life in their own context without judgment is called:",
+    options: [
+        { id: 'gst112-q211o1', text: 'Ethnocentrism' },
+        { id: 'gst112-q211o2', text: 'Cultural relativism' },
+        { id: 'gst112-q211o3', text: 'Culture contact' },
+        { id: 'gst112-q211o4', text: 'Innovation' }
+    ],
+    correctOptionId: 'gst112-q211o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q212',
+    text: 'The development of common practices and beliefs by all societies, such as cooking and marriage, are known as:',
+    options: [
+        { id: 'gst112-q212o1', text: 'Cultural symbols' },
+        { id: 'gst112-q212o2', text: 'Cultural relativism' },
+        { id: 'gst112-q212o3', text: 'Cultural universals' },
+        { id: 'gst112-q212o4', text: 'Material culture' }
+    ],
+    correctOptionId: 'gst112-q212o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q213',
+    text: "A group's ways of thinking (beliefs, values) and common patterns of behavior (language) constitute its:",
+    options: [
+        { id: 'gst112-q213o1', text: 'Material culture' },
+        { id: 'gst112-q213o2', text: 'Nonmaterial culture' },
+        { id: 'gst112-q213o3', text: 'Cultural legacy' },
+        { id: 'gst112-q213o4', text: 'Symbolic culture' }
+    ],
+    correctOptionId: 'gst112-q213o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q214',
+    text: 'Which of these is an example of material culture?',
+    options: [
+        { id: 'gst112-q214o1', text: 'Language' },
+        { id: 'gst112-q214o2', text: 'The value of honesty' },
+        { id: 'gst112-q214o3', text: 'A traditional carved mask' },
+        { id: 'gst112-q214o4', text: 'A religious belief' }
+    ],
+    correctOptionId: 'gst112-q214o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q215',
+    text: 'The process of introducing a new idea or object to a culture is called:',
+    options: [
+        { id: 'gst112-q215o1', text: 'Discovery' },
+        { id: 'gst112-q215o2', text: 'Invention' },
+        { id: 'gst112-q215o3', text: 'Innovation' },
+        { id: 'gst112-q215o4', text: 'Contact' }
+    ],
+    correctOptionId: 'gst112-q215o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q216',
+    text: 'The musical instrument "Kakaki" is traditionally associated with which ethnic group?',
+    options: [
+        { id: 'gst112-q216o1', text: 'Yoruba' },
+        { id: 'gst112-q216o2', text: 'Igbo' },
+        { id: 'gst112-q216o3', text: 'Hausa' },
+        { id: 'gst112-q216o4', text: 'Kanuri' }
+    ],
+    correctOptionId: 'gst112-q216o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q217',
+    text: 'The Argungu Fishing Festival began in 1934 to mark:',
+    options: [
+        { id: 'gst112-q217o1', text: 'The beginning of the planting season' },
+        { id: 'gst112-q217o2', text: 'The end of hostilities between the Sokoto Caliphate and Kebbi Kingdom' },
+        { id: 'gst112-q217o3', text: 'The coronation of a new Emir' },
+        { id: 'gst112-q217o4', text: 'A successful harvest' }
+    ],
+    correctOptionId: 'gst112-q217o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q218',
+    text: 'The Eyo Festival is uniquely associated with which Nigerian city?',
+    options: [
+        { id: 'gst112-q218o1', text: 'Benin' },
+        { id: 'gst112-q218o2', text: 'Lagos' },
+        { id: 'gst112-q218o3', text: 'Ibadan' },
+        { id: 'gst112-q218o4', text: 'Kano' }
+    ],
+    correctOptionId: 'gst112-q218o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q219',
+    text: 'The New Yam Festival (Iwa ji) among the Igbo symbolizes:',
+    options: [
+        { id: 'gst112-q219o1', text: 'The worship of the earth goddess' },
+        { id: 'gst112-q219o2', text: 'The coronation of a new chief' },
+        { id: 'gst112-q219o3', text: 'The conclusion of a harvest and start of a new cycle' },
+        { id: 'gst112-q219o4', text: 'A historical military victory' }
+    ],
+    correctOptionId: 'gst112-q219o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q220',
+    text: 'Which of these languages is NOT one of the major three in Nigeria?',
+    options: [
+        { id: 'gst112-q220o1', text: 'Hausa' },
+        { id: 'gst112-q220o2', text: 'Yoruba' },
+        { id: 'gst112-q220o3', text: 'Igbo' },
+        { id: 'gst112-q220o4', text: 'Fulfulde' }
+    ],
+    correctOptionId: 'gst112-q220o4',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q221',
+    text: 'The concept that culture is "learned" means that:',
+    options: [
+        { id: 'gst112-q221o1', text: 'It is genetically inherited' },
+        { id: 'gst112-q221o2', text: 'It is acquired through social interaction' },
+        { id: 'gst112-q221o3', text: 'It is static and does not change' },
+        { id: 'gst112-q221o4', text: 'It is only possessed by educated individuals' }
+    ],
+    correctOptionId: 'gst112-q221o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q222',
+    text: 'Which attribute of culture explains why shaking hands is considered a greeting in some societies but not in others?',
+    options: [
+        { id: 'gst112-q222o1', text: 'Culture is social' },
+        { id: 'gst112-q222o2', text: 'Culture is shared' },
+        { id: 'gst112-q222o3', text: 'Culture is learned' },
+        { id: 'gst112-q222o4', text: 'Culture is gratifying' }
+    ],
+    correctOptionId: 'gst112-q222o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q223',
+    text: 'Pre-colonial Nigerian societies can be broadly categorized into all of the following EXCEPT:',
+    options: [
+        { id: 'gst112-q223o1', text: 'Centralized Kingdoms' },
+        { id: 'gst112-q223o2', text: 'Constitutional Republics' },
+        { id: 'gst112-q223o3', text: 'City-States' },
+        { id: 'gst112-q223o4', text: 'Stateless Societies' }
+    ],
+    correctOptionId: 'gst112-q223o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q224',
+    text: 'A key feature of centralized absolute kingdoms like the Hausa/Fulani empire was:',
+    options: [
+        { id: 'gst112-q224o1', text: 'Power was diffused among age grades' },
+        { id: 'gst112-q224o2', text: "The ruler's power was checked by a council" },
+        { id: 'gst112-q224o3', text: 'Administrative power was concentrated in a single ruler' },
+        { id: 'gst112-q224o4', text: 'Leaders were elected by a village assembly' }
+    ],
+    correctOptionId: 'gst112-q224o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q225',
+    text: 'The legendary founder of the Hausa kingdom was:',
+    options: [
+        { id: 'gst112-q225o1', text: 'Oduduwa' },
+        { id: 'gst112-q225o2', text: 'Bayajida' },
+        { id: 'gst112-q225o3', text: 'Sango' },
+        { id: 'gst112-q225o4', text: 'Oranmiyan' }
+    ],
+    correctOptionId: 'gst112-q225o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q226',
+    text: 'The Islamic reformist movement that transformed the Hausa political system in the early 19th century was led by:',
+    options: [
+        { id: 'gst112-q226o1', text: 'Muhammad Bello' },
+        { id: 'gst112-q226o2', text: 'Abdullahi Dan Fodio' },
+        { id: 'gst112-q226o3', text: 'Uthman Dan Fodio' },
+        { id: 'gst112-q226o4', text: 'El-Kanemi' }
+    ],
+    correctOptionId: 'gst112-q226o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q227',
+    text: 'In the Hausa/Fulani Emirate system, the political and religious head of an emirate was the:',
+    options: [
+        { id: 'gst112-q227o1', text: 'Hakimi' },
+        { id: 'gst112-q227o2', text: 'Waziri' },
+        { id: 'gst112-q227o3', text: 'Emir' },
+        { id: 'gst112-q227o4', text: 'Alkali' }
+    ],
+    correctOptionId: 'gst112-q227o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q228',
+    text: 'The official in charge of the capital city in a Hausa/Fulani emirate was the:',
+    options: [
+        { id: 'gst112-q228o1', text: 'Madawaki' },
+        { id: 'gst112-q228o2', text: 'Galadima' },
+        { id: 'gst112-q228o3', text: 'Sarkin Fada' },
+        { id: 'gst112-q228o4', text: 'Sarkin Ruwa' }
+    ],
+    correctOptionId: 'gst112-q228o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q229',
+    text: 'The head of the emirate army in the Hausa/Fulani system was the:',
+    options: [
+        { id: 'gst112-q229o1', text: 'Madawaki' },
+        { id: 'gst112-q229o2', text: 'Sarkin Dogarai' },
+        { id: 'gst112-q229o3', text: 'Waziri' },
+        { id: 'gst112-q229o4', text: 'Sarkin Pawa' }
+    ],
+    correctOptionId: 'gst112-q229o1',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q230',
+    text: 'Judicial administration in the Hausa/Fulani caliphate was based on:',
+    options: [
+        { id: 'gst112-q230o1', text: 'Traditional customs alone' },
+        { id: 'gst112-q230o2', text: 'A blend of Islamic and customary law' },
+        { id: 'gst112-q230o3', text: 'The English common law' },
+        { id: 'gst112-q230o4', text: 'The Islamic legal system (Sharia)' }
+    ],
+    correctOptionId: 'gst112-q230o4',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q231',
+    text: 'The Yoruba political system, particularly in Oyo, is best described as a:',
+    options: [
+        { id: 'gst112-q231o1', text: 'Military dictatorship' },
+        { id: 'gst112-q231o2', text: 'Constitutional monarchy' },
+        { id: 'gst112-q231o3', text: 'Theocratic state' },
+        { id: 'gst112-q231o4', text: 'Direct democracy' }
+    ],
+    correctOptionId: 'gst112-q231o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q232',
+    text: 'The paramount ruler of the old Oyo empire was known as the:',
+    options: [
+        { id: 'gst112-q232o1', text: 'Ooni' },
+        { id: 'gst112-q232o2', text: 'Alaafin' },
+        { id: 'gst112-q232o3', text: 'Oba' },
+        { id: 'gst112-q232o4', text: 'Bashorun' }
+    ],
+    correctOptionId: 'gst112-q232o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q233',
+    text: 'The council of kingmakers in Oyo that appointed the Alaafin and could check his power was called the:',
+    options: [
+        { id: 'gst112-q233o1', text: 'Ogboni' },
+        { id: 'gst112-q233o2', text: 'Oyo-Mesi' },
+        { id: 'gst112-q233o3', text: 'Ilari' },
+        { id: 'gst112-q233o4', text: 'Age Grades' }
+    ],
+    correctOptionId: 'gst112-q233o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q234',
+    text: 'The occultist group that served as a check on the powers of both the Alaafin and the Oyo-Mesi was the:',
+    options: [
+        { id: 'gst112-q234o1', text: 'Ogboni cult' },
+        { id: 'gst112-q234o2', text: 'Oloju Edu' },
+        { id: 'gst112-q234o3', text: 'Egungun society' },
+        { id: 'gst112-q234o4', text: 'Aremo' }
+    ],
+    correctOptionId: 'gst112-q234o1',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q235',
+    text: 'The commander of the armed forces in the Oyo empire was the:',
+    options: [
+        { id: 'gst112-q235o1', text: 'Bashorun' },
+        { id: 'gst112-q235o2', text: 'Aare Ona Kakanfo' },
+        { id: 'gst112-q235o3', text: 'Iyalode' },
+        { id: 'gst112-q235o4', text: 'Baale' }
+    ],
+    correctOptionId: 'gst112-q235o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q236',
+    text: 'Decentralized or stateless societies in pre-colonial Nigeria were common among the:',
+    options: [
+        { id: 'gst112-q236o1', text: 'Hausa and Kanuri' },
+        { id: 'gst112-q236o2', text: 'Yoruba and Edo' },
+        { id: 'gst112-q236o3', text: 'Igbo, Tiv, and Idoma' },
+        { id: 'gst112-q236o4', text: 'Nupe and Igala' }
+    ],
+    correctOptionId: 'gst112-q236o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q237',
+    text: 'In pre-colonial Igbo society, the first level of political authority was the:',
+    options: [
+        { id: 'gst112-q237o1', text: 'Village Assembly (Amala Oha)' },
+        { id: 'gst112-q237o2', text: 'Council of Elders' },
+        { id: 'gst112-q237o3', text: 'Family (headed by the Okpara)' },
+        { id: 'gst112-q237o4', text: 'Age Grade' }
+    ],
+    correctOptionId: 'gst112-q237o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q238',
+    text: 'The village assembly in Igbo land where decisions were made by consensus was known as:',
+    options: [
+        { id: 'gst112-q238o1', text: 'Ozo' },
+        { id: 'gst112-q238o2', text: 'Umunna' },
+        { id: 'gst112-q238o3', text: 'Amala Oha' },
+        { id: 'gst112-q238o4', text: 'Ofo' }
+    ],
+    correctOptionId: 'gst112-q238o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q239',
+    text: 'The highest and most important magico-religious and social title in pre-colonial Igbo society was the:',
+    options: [
+        { id: 'gst112-q239o1', text: 'Okpara title' },
+        { id: 'gst112-q239o2', text: 'Ozo title' },
+        { id: 'gst112-q239o3', text: 'Dibia title' },
+        { id: 'gst112-q239o4', text: 'Eze title' }
+    ],
+    correctOptionId: 'gst112-q239o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q240',
+    text: 'Which institution in Igbo society was responsible for clearing paths, building bridges, and defending the community?',
+    options: [
+        { id: 'gst112-q240o1', text: 'The Ozo title holders' },
+        { id: 'gst112-q240o2', text: 'The Family heads' },
+        { id: 'gst112-q240o3', text: 'The Age Grades' },
+        { id: 'gst112-q240o4', text: 'The Priest of Ala' }
+    ],
+    correctOptionId: 'gst112-q240o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q241',
+    text: 'The earth goddess (Ala) played a significant role in the judicial system of which pre-colonial society?',
+    options: [
+        { id: 'gst112-q241o1', text: 'Hausa/Fulani' },
+        { id: 'gst112-q241o2', text: 'Yoruba' },
+        { id: 'gst112-q241o3', text: 'Igbo' },
+        { id: 'gst112-q241o4', text: 'Kanuri' }
+    ],
+    correctOptionId: 'gst112-q241o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q242',
+    text: 'A major difference between the Hausa/Fulani and Yoruba pre-colonial systems was that:',
+    options: [
+        { id: 'gst112-q242o1', text: 'The Yoruba system was stateless' },
+        { id: 'gst112-q242o2', text: "The Hausa/Fulani ruler had absolute power, while the Yoruba ruler's power was checked" },
+        { id: 'gst112-q242o3', text: 'The Hausa/Fulani system was democratic' },
+        { id: 'gst112-q242o4', text: 'The Yoruba system was based on Islamic law' }
+    ],
+    correctOptionId: 'gst112-q242o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q243',
+    text: 'The concept of "acephalous" in political administration means:',
+    options: [
+        { id: 'gst112-q243o1', text: 'Centralized' },
+        { id: 'gst112-q243o2', text: 'Headless' },
+        { id: 'gst112-q243o3', text: 'Democratic' },
+        { id: 'gst112-q243o4', text: 'Theocratic' }
+    ],
+    correctOptionId: 'gst112-q243o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q244',
+    text: 'The primary reason for the stateless nature of some pre-colonial societies was:',
+    options: [
+        { id: 'gst112-q244o1', text: 'Their small size and segmentary organization' },
+        { id: 'gst112-q244o2', text: 'A strong belief in a supreme king' },
+        { id: 'gst112-q244o3', text: 'Influence from European traders' },
+        { id: 'gst112-q244o4', text: 'A written constitution that distributed power' }
+    ],
+    correctOptionId: 'gst112-q244o1',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q245',
+    text: "The official known as 'Sarkin Fada' in the Hausa/Fulani system was responsible for:",
+    options: [
+        { id: 'gst112-q245o1', text: 'Leading the army' },
+        { id: 'gst112-q245o2', text: 'Administering the capital' },
+        { id: 'gst112-q245o3', text: "Organizing palace workers and being the Emir's spokesperson" },
+        { id: 'gst112-q245o4', text: 'Overseeing the treasury' }
+    ],
+    correctOptionId: 'gst112-q245o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q246',
+    text: 'In the Oyo empire, the heir apparent to the throne was known as the:',
+    options: [
+        { id: 'gst112-q246o1', text: 'Bashorun' },
+        { id: 'gst112-q246o2', text: 'Aremo' },
+        { id: 'gst112-q246o3', text: 'Iyalode' },
+        { id: 'gst112-q246o4', text: 'Baale' }
+    ],
+    correctOptionId: 'gst112-q246o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q247',
+    text: "The 'Iyalode' in the Yoruba political structure was the:",
+    options: [
+        { id: 'gst112-q247o1', text: 'Commander of the army' },
+        { id: 'gst112-q247o2', text: 'Head of the Ogboni' },
+        { id: 'gst112-q247o3', text: 'Leader of women' },
+        { id: 'gst112-q247o4', text: 'Prime Minister' }
+    ],
+    correctOptionId: 'gst112-q247o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q248',
+    text: 'The primary motive for the colonization of Africa, according to the chapter, was:',
+    options: [
+        { id: 'gst112-q248o1', text: 'Religious propagation' },
+        { id: 'gst112-q248o2', text: 'Political dominance' },
+        { id: 'gst112-q248o3', text: 'Economic exploitation' },
+        { id: 'gst112-q248o4', text: 'Humanitarian aid' }
+    ],
+    correctOptionId: 'gst112-q248o3',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q249',
+    text: 'The process of integrating Nigeria into the capitalist economy involved all of the following EXCEPT:',
+    options: [
+        { id: 'gst112-q249o1', text: 'Monetization of the economy' },
+        { id: 'gst112-q249o2', text: 'Building factories for finished goods' },
+        { id: 'gst112-q249o3', text: 'Imperialism of trade' },
+        { id: 'gst112-q249o4', text: 'Development of infrastructure for resource extraction' }
+    ],
+    correctOptionId: 'gst112-q249o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q250',
+    text: 'Monetization was achieved by the colonial government through methods such as:',
+    options: [
+        { id: 'gst112-q250o1', text: 'Providing free education' },
+        { id: 'gst112-q250o2', text: 'Introducing wage labour and taxes payable in new currency' },
+        { id: 'gst112-q250o3', text: 'Encouraging subsistence farming' },
+        { id: 'gst112-q250o4', text: 'Promoting barter trade' }
+    ],
+    correctOptionId: 'gst112-q250o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q251',
+    text: 'Pre-colonial currencies in Nigeria included:',
+    options: [
+        { id: 'gst112-q251o1', text: 'Naira and Kobo' },
+        { id: 'gst112-q251o2', text: 'Pounds and Shillings' },
+        { id: 'gst112-q251o3', text: 'Cowries, salt, and metals' },
+        { id: 'gst112-q251o4', text: 'Gold and Silver coins' }
+    ],
+    correctOptionId: 'gst112-q251o3',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q252',
+    text: 'The colonial trade system made Nigeria a producer of ____________ and a consumer of ____________.',
+    options: [
+        { id: 'gst112-q252o1', text: 'Finished goods / raw materials' },
+        { id: 'gst112-q252o2', text: 'Luxury items / basic necessities' },
+        { id: 'gst112-q252o3', text: 'Raw materials / finished goods' },
+        { id: 'gst112-q252o4', text: 'Technology / agricultural products' }
+    ],
+    correctOptionId: 'gst112-q252o3',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q253',
+    text: 'The colonial infrastructure (railways, roads) was primarily built to:',
+    options: [
+        { id: 'gst112-q253o1', text: 'Integrate the Nigerian economy internally' },
+        { id: 'gst112-q253o2', text: 'Facilitate the movement of people' },
+        { id: 'gst112-q253o3', text: 'Ship raw materials from the hinterland to the coast for export' },
+        { id: 'gst112-q253o4', text: 'Promote tourism' }
+    ],
+    correctOptionId: 'gst112-q253o3',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q254',
+    text: 'At independence in 1960, the mainstay of the Nigerian economy was:',
+    options: [
+        { id: 'gst112-q254o1', text: 'Crude Oil' },
+        { id: 'gst112-q254o2', text: 'Manufacturing' },
+        { id: 'gst112-q254o3', text: 'Agriculture' },
+        { id: 'gst112-q254o4', text: 'Services' }
+    ],
+    correctOptionId: 'gst112-q254o3',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q255',
+    text: 'The strategy adopted after independence to produce goods that were previously imported was called:',
+    options: [
+        { id: 'gst112-q255o1', text: 'Export Promotion' },
+        { id: 'gst112-q255o2', text: 'Import Substitution Industrialization (ISI)' },
+        { id: 'gst112-q255o3', text: 'Commercialization' },
+        { id: 'gst112-q255o4', text: 'Privatization' }
+    ],
+    correctOptionId: 'gst112-q255o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q256',
+    text: 'Since the 1970s, the Nigerian economy has been characterized as a:',
+    options: [
+        { id: 'gst112-q256o1', text: 'Diversified industrial economy' },
+        { id: 'gst112-q256o2', text: 'Mono-cultural economy dependent on oil' },
+        { id: 'gst112-q256o3', text: 'Agrarian subsistence economy' },
+        { id: 'gst112-q256o4', text: 'Service-driven economy' }
+    ],
+    correctOptionId: 'gst112-q256o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q257',
+    text: 'A key problem of the Nigerian economy listed by Okowa (1997) is:',
+    options: [
+        { id: 'gst112-q257o1', text: 'Low population growth' },
+        { id: 'gst112-q257o2', text: 'Dependence on foreign technology' },
+        { id: 'gst112-q257o3', text: 'Surplus of skilled labour' },
+        { id: 'gst112-q257o4', text: 'Equal distribution of income' }
+    ],
+    correctOptionId: 'gst112-q257o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q258',
+    text: 'The over-dependence on oil is considered detrimental because:',
+    options: [
+        { id: 'gst112-q258o1', text: 'Oil is a renewable resource' },
+        { id: 'gst112-q258o2', text: 'It makes the economy vulnerable to fluctuations in international oil prices' },
+        { id: 'gst112-q258o3', text: 'It requires little foreign investment' },
+        { id: 'gst112-q258o4', text: 'It employs a majority of the population' }
+    ],
+    correctOptionId: 'gst112-q258o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q259',
+    text: 'The period when unemployment in Nigeria reached an all-time high of 23.9% was:',
+    options: [
+        { id: 'gst112-q259o1', text: '2006' },
+        { id: 'gst112-q259o2', text: '2011' },
+        { id: 'gst112-q259o3', text: '2014' },
+        { id: 'gst112-q259o4', text: '1980' }
+    ],
+    correctOptionId: 'gst112-q259o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q260',
+    text: 'According to the chapter, Nigerian graduates are often considered unemployable due to:',
+    options: [
+        { id: 'gst112-q260o1', text: 'Their high salary expectations' },
+        { id: 'gst112-q260o2', text: 'Poor educational standards and curriculum not aligned with market needs' },
+        { id: 'gst112-q260o3', text: 'A lack of universities in the country' },
+        { id: 'gst112-q260o4', text: 'Government policies banning graduate employment' }
+    ],
+    correctOptionId: 'gst112-q260o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q261',
+    text: 'The principle of progressive taxation is primarily aimed at:',
+    options: [
+        { id: 'gst112-q261o1', text: 'Increasing government revenue arbitrarily' },
+        { id: 'gst112-q261o2', text: 'Reducing inequality in wealth distribution' },
+        { id: 'gst112-q261o3', text: 'Punishing the rich' },
+        { id: 'gst112-q261o4', text: 'Encouraging foreign investment' }
+    ],
+    correctOptionId: 'gst112-q261o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q262',
+    text: "Transparency International's 2013 ranking placed Nigeria as:",
+    options: [
+        { id: 'gst112-q262o1', text: 'The least corrupt country in Africa' },
+        { id: 'gst112-q262o2', text: 'The second most corrupt country in the world' },
+        { id: 'gst112-q262o3', text: 'A model of transparency' },
+        { id: 'gst112-q262o4', text: 'Not rated due to lack of data' }
+    ],
+    correctOptionId: 'gst112-q262o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q263',
+    text: 'The Marketing Boards established during the colonial era were used to:',
+    options: [
+        { id: 'gst112-q263o1', text: 'Set up retail shops for consumers' },
+        { id: 'gst112-q263o2', text: 'Regulate and control the activities of local producers of raw materials' },
+        { id: 'gst112-q263o3', text: 'Train farmers in modern techniques' },
+        { id: 'gst112-q263o4', text: 'Provide loans to local industries' }
+    ],
+    correctOptionId: 'gst112-q263o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q264',
+    text: 'The Fourth National Development Plan (1981-1985) was notable for being the first to:',
+    options: [
+        { id: 'gst112-q264o1', text: 'Focus on oil exploration' },
+        { id: 'gst112-q264o2', text: 'Make a proactive attempt towards technological development' },
+        { id: 'gst112-q264o3', text: 'Abolish agriculture' },
+        { id: 'gst112-q264o4', text: 'Introduce the import substitution policy' }
+    ],
+    correctOptionId: 'gst112-q264o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q265',
+    text: 'The "rentier" nature of the oil sector implies that it:',
+    options: [
+        { id: 'gst112-q265o1', text: 'Generates wealth primarily through production and innovation' },
+        { id: 'gst112-q265o2', text: 'Creates massive employment' },
+        { id: 'gst112-q265o3', text: 'Yields revenue without a strong productive base domestically' },
+        { id: 'gst112-q265o4', text: 'Is owned and controlled by the Nigerian government' }
+    ],
+    correctOptionId: 'gst112-q265o3',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q266',
+    text: 'The geographical dimension of inequality in Nigeria is reflected in the wide gap between:',
+    options: [
+        { id: 'gst112-q266o1', text: 'Different ethnic groups' },
+        { id: 'gst112-q266o2', text: 'Urban and rural areas' },
+        { id: 'gst112-q266o3', text: 'Men and women' },
+        { id: 'gst112-q266o4', text: 'The old and the young' }
+    ],
+    correctOptionId: 'gst112-q266o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q267',
+    text: 'The structural adjustment program (SAP) of the 1980s is not explicitly mentioned, but the chapter attributes economic challenges mainly to:',
+    options: [
+        { id: 'gst112-q267o1', text: 'Global warming' },
+        { id: 'gst112-q267o2', text: 'Political instability and bad governance, especially under military rule' },
+        { id: 'gst112-q267o3', text: 'The lack of natural resources' },
+        { id: 'gst112-q267o4', text: 'Overpopulation' }
+    ],
+    correctOptionId: 'gst112-q267o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q268',
+    text: 'Westernization is best defined as:',
+    options: [
+        { id: 'gst112-q268o1', text: 'The process of becoming economically developed' },
+        { id: 'gst112-q268o2', text: 'The adoption of Western culture in areas like politics, lifestyle, and values' },
+        { id: 'gst112-q268o3', text: 'The rejection of all traditional practices' },
+        { id: 'gst112-q268o4', text: 'The movement of people from rural to urban areas' }
+    ],
+    correctOptionId: 'gst112-q268o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q269',
+    text: "Modernization theory suggests a transition from:",
+    options: [
+        { id: 'gst112-q269o1', text: "A 'modern' to a 'post-modern' society" },
+        { id: 'gst112-q269o2', text: "A 'traditional' to a 'modern' society" },
+        { id: 'gst112-q269o3', text: 'A capitalist to a socialist society' },
+        { id: 'gst112-q269o4', text: 'An agrarian to a nomadic society' }
+    ],
+    correctOptionId: 'gst112-q269o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q270',
+    text: 'A major negative impact of Westernization in Nigeria has been:',
+    options: [
+        { id: 'gst112-q270o1', text: 'The introduction of formal education' },
+        { id: 'gst112-q270o2', text: 'The extinction of some indigenous languages and cultures' },
+        { id: 'gst112-q270o3', text: 'The abolition of harmful practices like the killing of twins' },
+        { id: 'gst112-q270o4', text: 'The development of modern infrastructure' }
+    ],
+    correctOptionId: 'gst112-q270o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q271',
+    text: 'The official language of education and day-to-day communication in Nigeria is:',
+    options: [
+        { id: 'gst112-q271o1', text: 'Hausa' },
+        { id: 'gst112-q271o2', text: 'Yoruba' },
+        { id: 'gst112-q271o3', text: 'Igbo' },
+        { id: 'gst112-q271o4', text: 'English' }
+    ],
+    correctOptionId: 'gst112-q271o4',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q272',
+    text: 'The adoption of Western-style church weddings alongside traditional ceremonies is an example of:',
+    options: [
+        { id: 'gst112-q272o1', text: 'Cultural relativism' },
+        { id: 'gst112-q272o2', text: 'Cultural revival' },
+        { id: 'gst112-q272o3', text: 'Cultural syncretism (blending)' },
+        { id: 'gst112-q272o4', text: 'Cultural extinction' }
+    ],
+    correctOptionId: 'gst112-q272o3',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q273',
+    text: 'According to the chapter, which of the following is a positive effect of Western influence?',
+    options: [
+        { id: 'gst112-q273o1', text: 'The loss of native languages' },
+        { id: 'gst112-q273o2', text: 'The abolition of the killing of twins' },
+        { id: 'gst112-q273o3', text: 'The adoption of Western dress codes' },
+        { id: 'gst112-q273o4', text: 'The decline in respect for elders' }
+    ],
+    correctOptionId: 'gst112-q273o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q274',
+    text: 'The concept where individuals identify with a group based on common ancestry and culture is:',
+    options: [
+        { id: 'gst112-q274o1', text: 'Nationality' },
+        { id: 'gst112-q274o2', text: 'Ethnicity' },
+        { id: 'gst112-q274o3', text: 'Citizenship' },
+        { id: 'gst112-q274o4', text: 'Community' }
+    ],
+    correctOptionId: 'gst112-q274o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q275',
+    text: 'In modern times, the concept of community has been less limited by geography due to:',
+    options: [
+        { id: 'gst112-q275o1', text: 'The advent of the Internet and online communities' },
+        { id: 'gst112-q275o2', text: 'Increased rural-to-urban migration' },
+        { id: 'gst112-q275o3', text: 'The decline of traditional values' },
+        { id: 'gst112-q275o4', text: 'Government policies' }
+    ],
+    correctOptionId: 'gst112-q275o1',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q276',
+    text: 'Ambassador Yusuf Maitama Sule defined culture as all of the following EXCEPT:',
+    options: [
+        { id: 'gst112-q276o1', text: 'The customs and costumes of a people' },
+        { id: 'gst112-q276o2', text: 'The identity of the people' },
+        { id: 'gst112-q276o3', text: 'Merely singing and dancing' },
+        { id: 'gst112-q276o4', text: 'The philosophy and ideology of a people' }
+    ],
+    correctOptionId: 'gst112-q276o3',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q277',
+    text: 'Identity politics often leads to:',
+    options: [
+        { id: 'gst112-q277o1', text: 'National unity and cohesion' },
+        { id: 'gst112-q277o2', text: 'Categorization of people for inclusion or exclusion' },
+        { id: 'gst112-q277o3', text: 'Economic development' },
+        { id: 'gst112-q277o4', text: 'The weakening of ethnic ties' }
+    ],
+    correctOptionId: 'gst112-q277o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q278',
+    text: 'The conflicts in Zangon Kataf (1992) were initially between indigenous people and Hausa traders but were later interpreted as:',
+    options: [
+        { id: 'gst112-q278o1', text: 'An economic dispute' },
+        { id: 'gst112-q278o2', text: 'A religious conflict' },
+        { id: 'gst112-q278o3', text: 'A land ownership issue' },
+        { id: 'gst112-q278o4', text: 'A political party clash' }
+    ],
+    correctOptionId: 'gst112-q278o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q279',
+    text: 'The rise of radical youth organizations in the Niger Delta is often linked to:',
+    options: [
+        { id: 'gst112-q279o1', text: 'High levels of employment' },
+        { id: 'gst112-q279o2', text: 'The equitable distribution of oil wealth' },
+        { id: 'gst112-q279o3', text: 'Resentment from poverty and neglect despite resource wealth' },
+        { id: 'gst112-q279o4', text: 'Strong support from traditional elders' }
+    ],
+    correctOptionId: 'gst112-q279o3',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q280',
+    text: 'National identity is described as:',
+    options: [
+        { id: 'gst112-q280o1', text: 'A single, fixed characteristic' },
+        { id: 'gst112-q280o2', text: 'A combination of socio-cultural characteristics that can be multi-layered' },
+        { id: 'gst112-q280o3', text: "Solely based on one's place of birth" },
+        { id: 'gst112-q280o4', text: 'Determined only by the government' }
+    ],
+    correctOptionId: 'gst112-q280o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q281',
+    text: 'The chapter suggests that religious conflicts in Nigeria are often:',
+    options: [
+        { id: 'gst112-q281o1', text: 'Purely theological disputes' },
+        { id: 'gst112-q281o2', text: 'Fueled by external interests and manipulated for political ends' },
+        { id: 'gst112-q281o3', text: 'Unrelated to ethnicity' },
+        { id: 'gst112-q281o4', text: 'A recent phenomenon since independence' }
+    ],
+    correctOptionId: 'gst112-q281o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q282',
+    text: 'Community service, as described in the chapter, is typically:',
+    options: [
+        { id: 'gst112-q282o1', text: 'A mandatory military service' },
+        { id: 'gst112-q282o2', text: 'A voluntary action that benefits the community' },
+        { id: 'gst112-q282o3', text: 'A form of taxation' },
+        { id: 'gst112-q282o4', text: 'Only for students as a punishment' }
+    ],
+    correctOptionId: 'gst112-q282o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q283',
+    text: 'The arbitrary borders of modern African states were drawn up at the:',
+    options: [
+        { id: 'gst112-q283o1', text: 'Lagos Conference of 1960' },
+        { id: 'gst112-q283o2', text: 'United Nations General Assembly' },
+        { id: 'gst112-q283o3', text: 'Berlin Conference of 1884/1885' },
+        { id: 'gst112-q283o4', text: 'OAU Summit in Addis Ababa' }
+    ],
+    correctOptionId: 'gst112-q283o3',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q284',
+    text: 'The colonial policy of "divide and rule" aimed to:',
+    options: [
+        { id: 'gst112-q284o1', text: 'Unite the various ethnic groups' },
+        { id: 'gst112-q284o2', text: 'Prevent the integration of Nigerians and maintain control' },
+        { id: 'gst112-q284o3', text: 'Promote even development' },
+        { id: 'gst112-q284o4', text: 'Establish a democratic system' }
+    ],
+    correctOptionId: 'gst112-q284o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q285',
+    text: 'The creation of "Sabo Gari" quarters in various towns was a colonial strategy to:',
+    options: [
+        { id: 'gst112-q285o1', text: 'Provide modern housing for all' },
+        { id: 'gst112-q285o2', text: 'Segregate people from different regions and prevent integration' },
+        { id: 'gst112-q285o3', text: 'Promote cultural exchange' },
+        { id: 'gst112-q285o4', text: 'Serve as commercial centers' }
+    ],
+    correctOptionId: 'gst112-q285o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q286',
+    text: 'The Lyttleton Constitution of 1954 is significant for introducing:',
+    options: [
+        { id: 'gst112-q286o1', text: 'Republican status' },
+        { id: 'gst112-q286o2', text: 'The federal system of government in Nigeria' },
+        { id: 'gst112-q286o3', text: 'Military rule' },
+        { id: 'gst112-q286o4', text: 'Independence' }
+    ],
+    correctOptionId: 'gst112-q286o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q287',
+    text: 'A major fear that has characterized Nigerian federalism is the fear of:',
+    options: [
+        { id: 'gst112-q287o1', text: 'Economic prosperity' },
+        { id: 'gst112-q287o2', text: 'Domination by one ethnic group or region' },
+        { id: 'gst112-q287o3', text: 'Too much decentralization' },
+        { id: 'gst112-q287o4', text: 'Foreign investment' }
+    ],
+    correctOptionId: 'gst112-q287o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q288',
+    text: 'The principle of "derivation" in revenue allocation refers to:',
+    options: [
+        { id: 'gst112-q288o1', text: 'Sharing based on the population of a state' },
+        { id: 'gst112-q288o2', text: 'Sharing based on the land area of a state' },
+        { id: 'gst112-q288o3', text: 'Returning revenue to the state where the resources are generated' },
+        { id: 'gst112-q288o4', text: 'Sharing based on the needs of a state' }
+    ],
+    correctOptionId: 'gst112-q288o3',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q289',
+    text: 'The Niger Delta militancy emerged primarily as a protest against:',
+    options: [
+        { id: 'gst112-q289o1', text: 'The lack of religious freedom' },
+        { id: 'gst112-q289o2', text: 'Perceived injustice in revenue allocation and environmental degradation' },
+        { id: 'gst112-q289o3', text: 'The dominance of the oil industry by the Igbos' },
+        { id: 'gst112-q289o4', text: 'The creation of too many states' }
+    ],
+    correctOptionId: 'gst112-q289o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q290',
+    text: 'Ethnic manipulation by the political elite often involves:',
+    options: [
+        { id: 'gst112-q290o1', text: 'Promoting national unity above ethnic interests' },
+        { id: 'gst112-q290o2', text: 'Using ethnic identity to divide the masses and achieve self-centered goals' },
+        { id: 'gst112-q290o3', text: 'Abolishing all ethnic associations' },
+        { id: 'gst112-q290o4', text: 'Ensuring equitable distribution of resources' }
+    ],
+    correctOptionId: 'gst112-q290o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q291',
+    text: 'A challenge to nation-building related to governance is:',
+    options: [
+        { id: 'gst112-q291o1', text: 'The lack of natural resources' },
+        { id: 'gst112-q291o2', text: 'The questionable legitimacy of leaders due to incredible elections' },
+        { id: 'gst112-q291o3', text: 'The homogeneous nature of the population' },
+        { id: 'gst112-q291o4', text: 'The absence of a constitution' }
+    ],
+    correctOptionId: 'gst112-q291o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q292',
+    text: 'Religious intolerance in Nigeria primarily involves conflicts between:',
+    options: [
+        { id: 'gst112-q292o1', text: 'Traditional religion and Islam' },
+        { id: 'gst112-q292o2', text: 'Islam and Christianity' },
+        { id: 'gst112-q292o3', text: 'Christianity and Traditional religion' },
+        { id: 'gst112-q292o4', text: 'Different denominations within Christianity' }
+    ],
+    correctOptionId: 'gst112-q292o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q293',
+    text: 'The "indigene/settler" dichotomy refers to:',
+    options: [
+        { id: 'gst112-q293o1', text: 'Discrimination against citizens based on their state of ancestral origin' },
+        { id: 'gst112-q293o2', text: 'A policy for promoting unity' },
+        { id: 'gst112-q293o3', text: 'A system for allocating federal positions' },
+        { id: 'gst112-q293o4', text: 'A religious classification' }
+    ],
+    correctOptionId: 'gst112-q293o1',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q294',
+    text: 'The National Youth Service Corps (NYSC) scheme was established primarily to:',
+    options: [
+        { id: 'gst112-q294o1', text: 'Provide employment for graduates' },
+        { id: 'gst112-q294o2', text: 'Promote national unity by posting graduates outside their states of origin' },
+        { id: 'gst112-q294o3', text: 'Train graduates for the military' },
+        { id: 'gst112-q294o4', text: 'Encourage rural farming' }
+    ],
+    correctOptionId: 'gst112-q294o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q295',
+    text: 'According to the chapter, education is crucial for nation-building because it:',
+    options: [
+        { id: 'gst112-q295o1', text: 'Guarantees a job for everyone' },
+        { id: 'gst112-q295o2', text: 'Creates an enlightened society and promotes unity' },
+        { id: 'gst112-q295o3', text: 'Focuses only on technical skills' },
+        { id: 'gst112-q295o4', text: 'Is mandatory for political participation' }
+    ],
+    correctOptionId: 'gst112-q295o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q296',
+    text: 'The Federal Character Principle is aimed at ensuring:',
+    options: [
+        { id: 'gst112-q296o1', text: 'The dominance of the majority ethnic group' },
+        { id: 'gst112-q296o2', text: 'That appointments reflect the diversity of the country to foster a sense of belonging' },
+        { id: 'gst112-q296o3', text: 'That only the most qualified are appointed' },
+        { id: 'gst112-q296o4', text: 'The abolition of states' }
+    ],
+    correctOptionId: 'gst112-q296o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q297',
+    text: 'The chapter identifies a need for _______ to build a strong nation.',
+    options: [
+        { id: 'gst112-q297o1', text: 'Military rule' },
+        { id: 'gst112-q297o2', text: 'Charismatic and dedicated leadership' },
+        { id: 'gst112-q297o3', text: 'A single national language' },
+        { id: 'gst112-q297o4', text: 'The dissolution of all ethnic identities' }
+    ],
+    correctOptionId: 'gst112-q297o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q298',
+    text: 'For nation-building to succeed, the chapter emphasizes the importance of:',
+    options: [
+        { id: 'gst112-q298o1', text: 'Credible elections' },
+        { id: 'gst112-q298o2', text: 'A one-party state' },
+        { id: 'gst112-q298o3', text: 'Limiting freedom of speech' },
+        { id: 'gst112-q298o4', text: 'Centralizing all power' }
+    ],
+    correctOptionId: 'gst112-q298o1',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q299',
+    text: 'The number of states in the Nigerian federation is:',
+    options: [
+        { id: 'gst112-q299o1', text: '3' },
+        { id: 'gst112-q299o2', text: '12' },
+        { id: 'gst112-q299o3', text: '36' },
+        { id: 'gst112-q299o4', text: '774' }
+    ],
+    correctOptionId: 'gst112-q299o3',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q300',
+    text: 'The first Prime Minister of Nigeria who advocated for federalism was:',
+    options: [
+        { id: 'gst112-q300o1', text: 'Nnamdi Azikiwe' },
+        { id: 'gst112-q300o2', text: 'Obafemi Awolowo' },
+        { id: 'gst112-q300o3', text: 'Abubakar Tafawa Balewa' },
+        { id: 'gst112-q300o4', text: 'Ahmadu Bello' }
+    ],
+    correctOptionId: 'gst112-q300o3',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q301',
+    text: 'The problem of "hegemony" in Nigerian federalism refers to:',
+    options: [
+        { id: 'gst112-q301o1', text: 'The struggle for resource control by the Niger Delta' },
+        { id: 'gst112-q301o2', text: 'The fear of political domination by a large ethnic group or region' },
+        { id: 'gst112-q301o3', text: 'The power of local governments' },
+        { id: 'gst112-q301o4', text: 'The influence of foreign countries' }
+    ],
+    correctOptionId: 'gst112-q301o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q302',
+    text: 'Civic education is important for nation-building because it teaches:',
+    options: [
+        { id: 'gst112-q302o1', text: "Only the history of one's ethnic group" },
+        { id: 'gst112-q302o2', text: 'The duties, rights, and responsibilities of citizens' },
+        { id: 'gst112-q302o3', text: 'How to avoid paying taxes' },
+        { id: 'gst112-q302o4', text: 'The superiority of one religion over another' }
+    ],
+    correctOptionId: 'gst112-q302o2',
+    topic: 'Nation Building in Nigeria'
+  },
+  {
+    id: 'gst112-q303',
+    text: 'According to Harold Laski, the modern state is a territorial society claiming:',
+    options: [
+        { id: 'gst112-q303o1', text: 'Subservience to international organizations' },
+        { id: 'gst112-q303o2', text: 'Supremacy over all other institutions within its area' },
+        { id: 'gst112-q303o3', text: 'Ownership of all private property' },
+        { id: 'gst112-q303o4', text: 'Religious uniformity among its citizens' }
+    ],
+    correctOptionId: 'gst112-q303o2',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q304',
+    text: 'Karl Marx viewed the state primarily as:',
+    options: [
+        { id: 'gst112-q304o1', text: 'A neutral arbiter of social conflicts' },
+        { id: 'gst112-q304o2', text: 'A machine for the oppression of one class by another' },
+        { id: 'gst112-q304o3', text: 'A divine institution' },
+        { id: 'gst112-q304o4', text: 'An association of families' }
+    ],
+    correctOptionId: 'gst112-q304o2',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q305',
+    text: 'Which of the following is NOT a fundamental characteristic of a state?',
+    options: [
+        { id: 'gst112-q305o1', text: 'Population' },
+        { id: 'gst112-q305o2', text: 'Territory' },
+        { id: 'gst112-q305o3', text: 'A ruling political party' },
+        { id: 'gst112-q305o4', text: 'Sovereignty' }
+    ],
+    correctOptionId: 'gst112-q305o3',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q306',
+    text: 'The supreme power of the state to make and enforce laws without external interference is called:',
+    options: [
+        { id: 'gst112-q306o1', text: 'Authority' },
+        { id: 'gst112-q306o2', text: 'Sovereignty' },
+        { id: 'gst112-q306o3', text: 'Legitimacy' },
+        { id: 'gst112-q306o4', text: 'Governance' }
+    ],
+    correctOptionId: 'gst112-q306o2',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q307',
+    text: 'The machinery through which the state carries out its functions is the:',
+    options: [
+        { id: 'gst112-q307o1', text: 'Constitution' },
+        { id: 'gst112-q307o2', text: 'Judiciary' },
+        { id: 'gst112-q307o3', text: 'Government' },
+        { id: 'gst112-q307o4', text: 'Civil Service' }
+    ],
+    correctOptionId: 'gst112-q307o3',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q308',
+    text: 'Section 14(1) of the 1999 Nigerian Constitution states that Nigeria shall be based on the principles of:',
+    options: [
+        { id: 'gst112-q308o1', text: 'Monarchy and aristocracy' },
+        { id: 'gst112-q308o2', text: 'Democracy and social justice' },
+        { id: 'gst112-q308o3', text: 'Capitalism and free market' },
+        { id: 'gst112-q308o4', text: 'Socialism and collective ownership' }
+    ],
+    correctOptionId: 'gst112-q308o2',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q309',
+    text: 'Which of the following is a primary responsibility of the state to its citizens?',
+    options: [
+        { id: 'gst112-q309o1', text: 'Providing employment for all' },
+        { id: 'gst112-q309o2', text: 'Guaranteeing individual wealth' },
+        { id: 'gst112-q309o3', text: 'Maintaining law and order' },
+        { id: 'gst112-q309o4', text: 'Dictating religious beliefs' }
+    ],
+    correctOptionId: 'gst112-q309o3',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q310',
+    text: 'A citizen of a country is a person who:',
+    options: [
+        { id: 'gst112-q310o1', text: 'Simply resides in the country' },
+        { id: 'gst112-q310o2', text: 'Has the legal right to belong to that country' },
+        { id: 'gst112-q310o3', text: 'Was born in the country' },
+        { id: 'gst112-q310o4', text: 'Owns property in the country' }
+    ],
+    correctOptionId: 'gst112-q310o2',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q311',
+    text: 'Citizenship in Nigeria can be acquired by all of the following means EXCEPT:',
+    options: [
+        { id: 'gst112-q311o1', text: 'Birth' },
+        { id: 'gst112-q311o2', text: 'Registration' },
+        { id: 'gst112-q311o3', text: 'Naturalization' },
+        { id: 'gst112-q311o4', text: 'Marriage alone' }
+    ],
+    correctOptionId: 'gst112-q311o4',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q312',
+    text: 'According to the 1999 Constitution, a person born in Nigeria after independence is a citizen if:',
+    options: [
+        { id: 'gst112-q312o1', text: 'They speak a Nigerian language' },
+        { id: 'gst112-q312o2', text: 'Either of their parents is a citizen of Nigeria' },
+        { id: 'gst112-q312o3', text: 'They have lived in Nigeria for 10 years' },
+        { id: 'gst112-q312o4', text: 'They are of good character' }
+    ],
+    correctOptionId: 'gst112-q312o2',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q313',
+    text: 'The chapter of the 1999 Constitution that contains the Fundamental Rights of citizens is:',
+    options: [
+        { id: 'gst112-q313o1', text: 'Chapter I' },
+        { id: 'gst112-q313o2', text: 'Chapter II' },
+        { id: 'gst112-q313o3', text: 'Chapter IV' },
+        { id: 'gst112-q313o4', text: 'Chapter VI' }
+    ],
+    correctOptionId: 'gst112-q313o3',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q314',
+    text: 'Which of the following is a constitutional right of a Nigerian citizen?',
+    options: [
+        { id: 'gst112-q314o1', text: 'The right to free housing' },
+        { id: 'gst112-q314o2', text: 'The right to dignity of human person' },
+        { id: 'gst112-q314o3', text: 'The right to a paid job' },
+        { id: 'gst112-q314o4', text: 'The right to ignore court orders' }
+    ],
+    correctOptionId: 'gst112-q314o2',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q315',
+    text: 'The legal obligation of a citizen, such as paying taxes, is referred to as a:',
+    options: [
+        { id: 'gst112-q315o1', text: 'Right' },
+        { id: 'gst112-q315o2', text: 'Duty' },
+        { id: 'gst112-q315o3', text: 'Privilege' },
+        { id: 'gst112-q315o4', text: 'Option' }
+    ],
+    correctOptionId: 'gst112-q315o2',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q316',
+    text: 'Which of the following is a civic responsibility of a citizen?',
+    options: [
+        { id: 'gst112-q316o1', text: 'The right to fair hearing' },
+        { id: 'gst112-q316o2', text: 'The right to vote and be voted for' },
+        { id: 'gst112-q316o3', text: 'Participating in voters registration' },
+        { id: 'gst112-q316o4', text: 'The right to freedom of movement' }
+    ],
+    correctOptionId: 'gst112-q316o3',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q317',
+    text: 'A good citizen is expected to be:',
+    options: [
+        { id: 'gst112-q317o1', text: 'Loyal to the state' },
+        { id: 'gst112-q317o2', text: 'Critical of all government actions without reason' },
+        { id: 'gst112-q317o3', text: 'Indifferent to public affairs' },
+        { id: 'gst112-q317o4', text: 'Exempt from obeying laws' }
+    ],
+    correctOptionId: 'gst112-q317o1',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q318',
+    text: 'The term "alien" refers to:',
+    options: [
+        { id: 'gst112-q318o1', text: 'A citizen by birth' },
+        { id: 'gst112-q318o2', text: 'A citizen by registration' },
+        { id: 'gst112-q318o3', text: 'A non-citizen or foreigner' },
+        { id: 'gst112-q318o4', text: 'A dual citizen' }
+    ],
+    correctOptionId: 'gst112-q318o3',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q319',
+    text: 'The duration of continuous residence required for citizenship by naturalization is:',
+    options: [
+        { id: 'gst112-q319o1', text: '5 years' },
+        { id: 'gst112-q319o2', text: '10 years' },
+        { id: 'gst112-q319o3', text: '15 years' },
+        { id: 'gst112-q319o4', text: '20 years' }
+    ],
+    correctOptionId: 'gst112-q319o3',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q320',
+    text: 'The body of fundamental rules that governs a state is known as the:',
+    options: [
+        { id: 'gst112-q320o1', text: 'Government' },
+        { id: 'gst112-q320o2', text: 'Legislature' },
+        { id: 'gst112-q320o3', text: 'Constitution' },
+        { id: 'gst112-q320o4', text: 'Judiciary' }
+    ],
+    correctOptionId: 'gst112-q320o3',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q321',
+    text: 'The moral obligation of a citizen to stand attentively during the national anthem is an example of:',
+    options: [
+        { id: 'gst112-q321o1', text: 'A legal duty' },
+        { id: 'gst112-q321o2', text: 'A fundamental right' },
+        { id: 'gst112-q321o3', text: 'A civic responsibility' },
+        { id: 'gst112-q321o4', text: 'A cultural practice with no civic importance' }
+    ],
+    correctOptionId: 'gst112-q321o3',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q322',
+    text: "The primary purpose of the state's responsibility to provide education is to:",
+    options: [
+        { id: 'gst112-q322o1', text: 'Create a compliant population' },
+        { id: 'gst112-q322o2', text: 'Promote the ideology of the ruling party' },
+        { id: 'gst112-q322o3', text: 'Ensure an enlightened and skilled citizenry' },
+        { id: 'gst112-q322o4', text: 'Replace the role of parents' }
+    ],
+    correctOptionId: 'gst112-q322o3',
+    topic: 'Moral and Civic Responsibility of State and Citizens'
+  },
+  {
+    id: 'gst112-q323',
+    text: 'Which minor ethnic group is mentioned as being found in Borno State?',
+    options: [
+        { id: 'gst112-q323o1', text: 'Tiv' },
+        { id: 'gst112-q323o2', text: 'Kanuri' },
+        { id: 'gst112-q323o3', text: 'Ibibio' },
+        { id: 'gst112-q323o4', text: 'Edo' }
+    ],
+    correctOptionId: 'gst112-q323o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q324',
+    text: "The 'Ogene' is a musical instrument associated with the:",
+    options: [
+        { id: 'gst112-q324o1', text: 'Hausa' },
+        { id: 'gst112-q324o2', text: 'Yoruba' },
+        { id: 'gst112-q324o3', text: 'Igbo' },
+        { id: 'gst112-q324o4', text: 'Fulani' }
+    ],
+    correctOptionId: 'gst112-q324o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q325',
+    text: 'The concept that culture is "continuous and cumulative" implies that:',
+    options: [
+        { id: 'gst112-q325o1', text: 'It is static' },
+        { id: 'gst112-q325o2', text: 'It builds upon the achievements of previous generations' },
+        { id: 'gst112-q325o3', text: 'It is easily lost' },
+        { id: 'gst112-q325o4', text: 'It is the same in every society' }
+    ],
+    correctOptionId: 'gst112-q325o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q326',
+    text: "The 'Sekere' is a musical instrument used by the:",
+    options: [
+        { id: 'gst112-q326o1', text: 'Igbo people' },
+        { id: 'gst112-q326o2', text: 'Hausa people' },
+        { id: 'gst112-q326o3', text: 'Yoruba people' },
+        { id: 'gst112-q326o4', text: 'Efik people' }
+    ],
+    correctOptionId: 'gst112-q326o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q327',
+    text: 'The festival that involves a competition to catch the largest fish is the:',
+    options: [
+        { id: 'gst112-q327o1', text: 'Eyo Festival' },
+        { id: 'gst112-q327o2', text: 'Igue Festival' },
+        { id: 'gst112-q327o3', text: 'New Yam Festival' },
+        { id: 'gst112-q327o4', text: 'Argungu Fishing Festival' }
+    ],
+    correctOptionId: 'gst112-q327o4',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q328',
+    text: "The feeling of superiority of one's culture over another is termed:",
+    options: [
+        { id: 'gst112-q328o1', text: 'Cultural Relativism' },
+        { id: 'gst112-q328o2', text: 'Ethnocentrism' },
+        { id: 'gst112-q328o3', text: 'Cultural Universalism' },
+        { id: 'gst112-q328o4', text: 'Symbolic Culture' }
+    ],
+    correctOptionId: 'gst112-q328o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q329',
+    text: 'According to the chapter, culture is transmitted from one generation to another mainly through:',
+    options: [
+        { id: 'gst112-q329o1', text: 'Genetics' },
+        { id: 'gst112-q329o2', text: 'Language' },
+        { id: 'gst112-q329o3', text: 'Immigration' },
+        { id: 'gst112-q329o4', text: 'Economic trade' }
+    ],
+    correctOptionId: 'gst112-q329o2',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q330',
+    text: "The 'Iwa ji' festival is associated with which crop?",
+    options: [
+        { id: 'gst112-q330o1', text: 'Cassava' },
+        { id: 'gst112-q330o2', text: 'Maize' },
+        { id: 'gst112-q330o3', text: 'Yam' },
+        { id: 'gst112-q330o4', text: 'Rice' }
+    ],
+    correctOptionId: 'gst112-q330o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q331',
+    text: "The 'Ooni' of Ife is the spiritual head of the:",
+    options: [
+        { id: 'gst112-q331o1', text: 'Hausa people' },
+        { id: 'gst112-q331o2', text: 'Igbo people' },
+        { id: 'gst112-q331o3', text: 'Yoruba people' },
+        { id: 'gst112-q331o4', text: 'Bini people' }
+    ],
+    correctOptionId: 'gst112-q331o3',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q332',
+    text: 'The Fulani language is called:',
+    options: [
+        { id: 'gst112-q332o1', text: 'Fulfulde' },
+        { id: 'gst112-q332o2', text: 'Hausa' },
+        { id: 'gst112-q332o3', text: 'Tangale' },
+        { id: 'gst112-q332o4', text: 'Kanuri' }
+    ],
+    correctOptionId: 'gst112-q332o1',
+    topic: 'Culture and Society in Nigeria'
+  },
+  {
+    id: 'gst112-q333',
+    text: "The 'Hakimi' in the Hausa/Fulani system was the head of the:",
+    options: [
+        { id: 'gst112-q333o1', text: 'Province' },
+        { id: 'gst112-q333o2', text: 'District' },
+        { id: 'gst112-q333o3', text: 'Village' },
+        { id: 'gst112-q333o4', text: 'Army' }
+    ],
+    correctOptionId: 'gst112-q333o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q334',
+    text: "The 'Dagaci' was the official in charge of a:",
+    options: [
+        { id: 'gst112-q334o1', text: 'District' },
+        { id: 'gst112-q334o2', text: 'Village' },
+        { id: 'gst112-q334o3', text: 'Treasury' },
+        { id: 'gst112-q334o4', text: 'Mosque' }
+    ],
+    correctOptionId: 'gst112-q334o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q335',
+    text: "The official title 'Sarkin Dogarai' translates to:",
+    options: [
+        { id: 'gst112-q335o1', text: 'Head of the Army' },
+        { id: 'gst112-q335o2', text: 'Inspector General of Police' },
+        { id: 'gst112-q335o3', text: 'Chief of Staff' },
+        { id: 'gst112-q335o4', text: 'Water Resources Officer' }
+    ],
+    correctOptionId: 'gst112-q335o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q336',
+    text: 'The highest court in the Hausa/Fulani emirate was the court of the:',
+    options: [
+        { id: 'gst112-q336o1', text: 'Alkali' },
+        { id: 'gst112-q336o2', text: 'Hakimi' },
+        { id: 'gst112-q336o3', text: 'Dagaci' },
+        { id: 'gst112-q336o4', text: 'Emir' }
+    ],
+    correctOptionId: 'gst112-q336o4',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q337',
+    text: "The 'Ogboni' cult in Yorubaland was powerful because of its:",
+    options: [
+        { id: 'gst112-q337o1', text: 'Military strength' },
+        { id: 'gst112-q337o2', text: 'Control over trade routes' },
+        { id: 'gst112-q337o3', text: 'Religious and occult influence' },
+        { id: 'gst112-q337o4', text: 'Large membership among youth' }
+    ],
+    correctOptionId: 'gst112-q337o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q338',
+    text: 'The practice where the Oyo-Mesi could force an Alaafin to "open the calabash" meant:',
+    options: [
+        { id: 'gst112-q338o1', text: 'To go to war' },
+        { id: 'gst112-q338o2', text: 'To commit suicide' },
+        { id: 'gst112-q338o3', text: 'To appoint a new Bashorun' },
+        { id: 'gst112-q338o4', text: 'To perform a ritual sacrifice' }
+    ],
+    correctOptionId: 'gst112-q338o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q339',
+    text: "In Igbo society, the 'Okpara' held the 'Ofo' title, which symbolized:",
+    options: [
+        { id: 'gst112-q339o1', text: 'Military command' },
+        { id: 'gst112-q339o2', text: 'Religious and moral authority' },
+        { id: 'gst112-q339o3', text: 'Wealth and prosperity' },
+        { id: 'gst112-q339o4', text: 'Judicial power over non-family members' }
+    ],
+    correctOptionId: 'gst112-q339o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q340',
+    text: "The 'Ala' (earth goddess) in Igbo belief system punished crimes such as:",
+    options: [
+        { id: 'gst112-q340o1', text: 'Theft' },
+        { id: 'gst112-q340o2', text: 'Adultery' },
+        { id: 'gst112-q340o3', text: 'Homicide and suicide' },
+        { id: 'gst112-q340o4', text: 'Debt' }
+    ],
+    correctOptionId: 'gst112-q340o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q341',
+    text: "The 'Aremo' in the Oyo empire was unique because:",
+    options: [
+        { id: 'gst112-q341o1', text: 'He was the commander of the army' },
+        { id: 'gst112-q341o2', text: 'He was expected to die with the Alaafin' },
+        { id: 'gst112-q341o3', text: 'He was the head of the Oyo-Mesi' },
+        { id: 'gst112-q341o4', text: 'He was the chief priest of Sango' }
+    ],
+    correctOptionId: 'gst112-q341o2',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q342',
+    text: 'A key democratic feature of the Igbo village assembly (Amala Oha) was:',
+    options: [
+        { id: 'gst112-q342o1', text: 'Decision-making by a hereditary chief' },
+        { id: 'gst112-q342o2', text: 'Decision-making by a council of priests' },
+        { id: 'gst112-q342o3', text: 'Decision-making by consensus of adult members' },
+        { id: 'gst112-q342o4', text: 'Decision-making by a secret ballot' }
+    ],
+    correctOptionId: 'gst112-q342o3',
+    topic: 'Pre-Colonial Political Administration'
+  },
+  {
+    id: 'gst112-q343',
+    text: 'The colonial economy was designed to serve the interests of:',
+    options: [
+        { id: 'gst112-q343o1', text: 'Nigerian farmers' },
+        { id: 'gst112-q343o2', text: 'European industries' },
+        { id: 'gst112-q343o3', text: 'Local traders' },
+        { id: 'gst112-q343o4', text: 'The traditional rulers' }
+    ],
+    correctOptionId: 'gst112-q343o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q344',
+    text: 'The introduction of taxes payable in British currency forced subsistence farmers to:',
+    options: [
+        { id: 'gst112-q344o1', text: 'Increase their crop yields' },
+        { id: 'gst112-q344o2', text: 'Seek wage-paying jobs' },
+        { id: 'gst112-q344o3', text: 'Revolt against the colonial government' },
+        { id: 'gst112-q344o4', text: 'Abandon farming altogether' }
+    ],
+    correctOptionId: 'gst112-q344o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q345',
+    text: 'The colonial government paid premium prices for agricultural produce like palm oil with:',
+    options: [
+        { id: 'gst112-q345o1', text: 'Higher quantity' },
+        { id: 'gst112-q345o2', text: 'Lower fatty acid content' },
+        { id: 'gst112-q345o3', text: 'A darker color' },
+        { id: 'gst112-q345o4', text: 'A sweeter smell' }
+    ],
+    correctOptionId: 'gst112-q345o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q346',
+    text: 'The railway lines built by the colonial government connected the hinterland to:',
+    options: [
+        { id: 'gst112-q346o1', text: 'Other African countries' },
+        { id: 'gst112-q346o2', text: 'The coastal ports for export' },
+        { id: 'gst112-q346o3', text: 'Major religious centers' },
+        { id: 'gst112-q346o4', text: 'All major cities within Nigeria equally' }
+    ],
+    correctOptionId: 'gst112-q346o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q347',
+    text: "The 'rentier' nature of the oil economy means the government relies on:",
+    options: [
+        { id: 'gst112-q347o1', text: 'Taxes from its citizens' },
+        { id: 'gst112-q347o2', text: 'Revenue from oil royalties and rents, not a productive domestic sector' },
+        { id: 'gst112-q347o3', text: 'Revenue from manufactured exports' },
+        { id: 'gst112-q347o4', text: 'Foreign aid' }
+    ],
+    correctOptionId: 'gst112-q347o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q348',
+    text: 'The Second National Development Plan (1970-1974) aimed to address:',
+    options: [
+        { id: 'gst112-q348o1', text: 'The decline in oil prices' },
+        { id: 'gst112-q348o2', text: 'Issues of income inequality' },
+        { id: 'gst112-q348o3', text: 'The problem of terrorism' },
+        { id: 'gst112-q348o4', text: 'The issue of state creation' }
+    ],
+    correctOptionId: 'gst112-q348o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q349',
+    text: 'Dependence on foreign technology is a problem because it leads to:',
+    options: [
+        { id: 'gst112-q349o1', text: 'Cultural revival' },
+        { id: 'gst112-q349o2', text: 'A drain on foreign exchange and lack of self-reliance' },
+        { id: 'gst112-q349o3', text: 'An increase in local innovation' },
+        { id: 'gst112-q349o4', text: 'Better quality goods' }
+    ],
+    correctOptionId: 'gst112-q349o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q350',
+    text: 'The decline of the agricultural sector after the 1970s was largely due to:',
+    options: [
+        { id: 'gst112-q350o1', text: 'Poor soil quality' },
+        { id: 'gst112-q350o2', text: 'The prominence of oil in the economy' },
+        { id: 'gst112-q350o3', text: 'Lack of interest in farming' },
+        { id: 'gst112-q350o4', text: 'Climate change' }
+    ],
+    correctOptionId: 'gst112-q350o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q351',
+    text: 'The chapter argues that the poor state of Nigerian universities is partly due to:',
+    options: [
+        { id: 'gst112-q351o1', text: 'Lack of funding' },
+        { id: 'gst112-q351o2', text: 'Politicization, such as zoning of admissions' },
+        { id: 'gst112-q351o3', text: 'Too many students' },
+        { id: 'gst112-q351o4', text: 'Inadequate libraries' }
+    ],
+    correctOptionId: 'gst112-q351o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q352',
+    text: 'The "Dutch Disease" in economics is analogous to Nigeria\'s problem of:',
+    options: [
+        { id: 'gst112-q352o1', text: 'High corruption' },
+        { id: 'gst112-q352o2', text: 'Over-reliance on a single resource (oil) leading to neglect of other sectors' },
+        { id: 'gst112-q352o3', text: 'Ethnic conflict' },
+        { id: 'gst112-q352o4', text: 'Population explosion' }
+    ],
+    correctOptionId: 'gst112-q352o2',
+    topic: 'Nigerian Economic History'
+  },
+  {
+    id: 'gst112-q353',
+    text: 'Modernization is often incorrectly equated with:',
+    options: [
+        { id: 'gst112-q353o1', text: 'Westernization' },
+        { id: 'gst112-q353o2', text: 'Urbanization' },
+        { id: 'gst112-q353o3', text: 'Democratization' },
+        { id: 'gst112-q353o4', text: 'Industrialization' }
+    ],
+    correctOptionId: 'gst112-q353o1',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q354',
+    text: 'The adoption of Western building designs has led to the abandonment of:',
+    options: [
+        { id: 'gst112-q354o1', text: 'Skyscrapers' },
+        { id: 'gst112-q354o2', text: 'Modern architecture' },
+        { id: 'gst112-q354o3', text: 'Local mud houses' },
+        { id: 'gst112-q354o4', text: 'Glass buildings' }
+    ],
+    correctOptionId: 'gst112-q354o3',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q355',
+    text: 'The concept of "community" in the digital age can now refer to:',
+    options: [
+        { id: 'gst112-q355o1', text: 'Only people living in the same village' },
+        { id: 'gst112-q355o2', text: 'Online groups sharing common interests' },
+        { id: 'gst112-q355o3', text: 'Members of the same family' },
+        { id: 'gst112-q355o4', text: 'People of the same religion' }
+    ],
+    correctOptionId: 'gst112-q355o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q356',
+    text: 'Identity, as defined by Mohamed Kuna, has both:',
+    options: [
+        { id: 'gst112-q356o1', text: 'Positive and negative components' },
+        { id: 'gst112-q356o2', text: 'Old and new components' },
+        { id: 'gst112-q356o3', text: 'Objective and subjective components' },
+        { id: 'gst112-q356o4', text: 'Religious and secular components' }
+    ],
+    correctOptionId: 'gst112-q356o3',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q357',
+    text: "The O'odua People's Congress (OPC) is an example of an:",
+    options: [
+        { id: 'gst112-q357o1', text: 'International non-governmental organization' },
+        { id: 'gst112-q357o2', text: 'Ethnic militia based on Yoruba identity' },
+        { id: 'gst112-q357o3', text: 'Agricultural cooperative society' },
+        { id: 'gst112-q357o4', text: 'Agency of the federal government' }
+    ],
+    correctOptionId: 'gst112-q357o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q358',
+    text: 'The chapter suggests that the real cause of conflicts like that in Zangon Kataf is often:',
+    options: [
+        { id: 'gst112-q358o1', text: 'Purely religious doctrine' },
+        { id: 'gst112-q358o2', text: 'Political and economic grievances that are later given a religious interpretation' },
+        { id: 'gst112-q358o3', text: 'A desire to create a new state' },
+        { id: 'gst112-q358o4', text: 'Foreign intervention' }
+    ],
+    correctOptionId: 'gst112-q358o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q359',
+    text: 'Community service is described as being typically:',
+    options: [
+        { id: 'gst112-q359o1', text: 'Highly paid' },
+        { id: 'gst112-q359o2', text: 'Voluntary and unpaid' },
+        { id: 'gst112-q359o3', text: 'Forced labour' },
+        { id: 'gst112-q359o4', text: 'Only for students' }
+    ],
+    correctOptionId: 'gst112-q359o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q360',
+    text: 'A major consequence of Westernization on Nigerian music is the:',
+    options: [
+        { id: 'gst112-q360o1', text: 'Total disappearance of traditional music' },
+        { id: 'gst112-q360o2', text: 'Emulation of Western pop music and styles' },
+        { id: 'gst112-q360o3', text: 'Strict preservation of traditional forms only' },
+        { id: 'gst112-q360o4', text: 'Ban on foreign music' }
+    ],
+    correctOptionId: 'gst112-q360o2',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q361',
+    text: 'The "digital divide" between urban and rural areas in Nigeria exacerbates:',
+    options: [
+        { id: 'gst112-q361o1', text: 'Religious tolerance' },
+        { id: 'gst112-q361o2', text: 'National unity' },
+        { id: 'gst112-q361o3', text: 'Inequalities in access to information and opportunities' },
+        { id: 'gst112-q361o4', text: 'Agricultural production' }
+    ],
+    correctOptionId: 'gst112-q361o3',
+    topic: 'Impact of Westernization and Modernization'
+  },
+  {
+    id: 'gst112-q362',
+    text: 'The chapter implies that a strong national identity in Nigeria is hindered by:',
+    options: [
+        { id: 'gst112-q362o1', text: 'The federal system of government' },
+        { id: 'gst112-q362o2', text: 'The strength of sub-national (ethnic/religious) identities' },
+        { id: 'gst112-q362o3', text: 'The official use of English' },
+        { id: 'gst112-q362o4', text: 'The size of the country' }
+    ],
+    correctOptionId: 'gst112-q362o2',
+    topic: 'Impact of Westernization and Modernization'
   }
 ];
