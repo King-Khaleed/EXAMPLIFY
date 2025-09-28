@@ -39,16 +39,16 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
     const formattedUserAnswers: Record<string, string> = {};
 
     questions.forEach(q => {
-      correctAnswers[q.id] = q.options.find(o => o.id === q.correctOptionId)?.text || '';
+      correctAnswers[q.text] = q.options.find(o => o.id === q.correctOptionId)?.text || '';
       if (!topics.includes(q.topic)) {
         topics.push(q.topic);
       }
       const userAnswerId = userAnswers[q.id];
-      formattedUserAnswers[q.id] = q.options.find(o => o.id === userAnswerId)?.text || 'No answer';
+      formattedUserAnswers[q.text] = q.options.find(o => o.id === userAnswerId)?.text || 'No answer';
     });
 
     const result = await getAiSuggestions({
-      examName: 'World Capitals Quiz',
+      examName: 'GST 111 Quiz',
       userAnswers: formattedUserAnswers,
       correctAnswers,
       topics,

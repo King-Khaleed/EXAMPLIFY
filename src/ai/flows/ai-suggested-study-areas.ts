@@ -39,12 +39,12 @@ The exam name is: {{{examName}}}
 
 The user's answers are:
 {{#each userAnswers}}
-  {{@key}}: {{this}}
+  - Question: {{@key}}, User Answer: "{{this}}"
 {{/each}}
 
 The correct answers are:
 {{#each correctAnswers}}
-  {{@key}}: {{this}}
+  - Question: {{@key}}, Correct Answer: "{{this}}"
 {{/each}}
 
 The topics covered in the exam are:
@@ -52,8 +52,9 @@ The topics covered in the exam are:
   - {{this}}
 {{/each}}
 
+Analyze the user's incorrect answers and identify the topics where they are weakest.
 Based on this information, suggest specific topics or areas the user should focus on to improve their score.
-Include reasoning for each suggested area.
+Include a detailed reasoning for each suggested area, referencing the specific questions they got wrong.
 
 Format your output as a JSON object with "suggestedAreas" (an array of strings) and "reasoning" (a string).
 `,
