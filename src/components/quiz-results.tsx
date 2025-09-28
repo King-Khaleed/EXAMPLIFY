@@ -4,11 +4,14 @@ import { useState } from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from './ui/card';
 import { Progress } from './ui/progress';
-import { Award, BrainCircuit, RefreshCw, Loader2 } from 'lucide-react';
+import { Award, BrainCircuit, RefreshCw, Loader2, CheckCircle2, XCircle } from 'lucide-react';
 import { getAiSuggestions } from '@/app/actions';
 import type { UserAnswerMap, Question } from '@/lib/types';
 import { useToast } from '@/hooks/use-toast';
 import { Alert, AlertDescription, AlertTitle } from './ui/alert';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
+import { cn } from '@/lib/utils';
+import { Badge } from './ui/badge';
 
 type QuizResultsProps = {
   score: number;
@@ -69,7 +72,7 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
 
   return (
     <div className="max-w-3xl mx-auto py-8">
-      <Card className="shadow-lg animate-in fade-in-50 duration-500">
+      <Card className="shadow-lg animate-in fade-in-50 duration-500 mb-8">
         <CardHeader className="text-center items-center">
           <Award className="h-16 w-16 text-primary mb-4" />
           <CardTitle className="text-3xl font-headline">Quiz Completed!</CardTitle>
@@ -126,6 +129,58 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
           </AlertDescription>
         </Alert>
       )}
+
+      <Card className="shadow-lg animate-in fade-in-50 duration-500 mt-8">
+        <CardHeader>
+          <CardTitle>Question Review</CardTitle>
+          <CardDescription>Review your answers below.</CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Accordion type="single" collapsible className="w-full">
+            {questions.map((question, index) => {
+              const userAnswerId = userAnswers[question.id];
+              const userAnswer = question.options.find(o => o.id === userAnswerId);
+              const correctAnswer = question.options.find(o => o.id === question.correctOptionId);
+              const isCorrect = userAnswerId === question.correctOptionId;
+
+              return (
+                <AccordionItem value={`item-${index}`} key={question.id}>
+                  <AccordionTrigger>
+                    <div className="flex items-center gap-4 w-full">
+                      {isCorrect ? (
+                        <CheckCircle2 className="h-5 w-5 text-green-600 flex-shrink-0" />
+                      ) : (
+                        <XCircle className="h-5 w-5 text-destructive flex-shrink-0" />
+                      )}
+                      <span className="text-left flex-1">{question.text}</span>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 space-y-4">
+                    <div className="space-y-2">
+                       <h4 className="font-semibold">Your Answer:</h4>
+                       <div className={cn("p-3 rounded-md border", !isCorrect ? "bg-destructive/10 border-destructive" : "bg-green-500/10 border-green-500")}>
+                         <p>{userAnswer?.text || <span className="text-muted-foreground italic">No answer</span>}</p>
+                       </div>
+                    </div>
+                     {!isCorrect && (
+                       <div className="space-y-2">
+                         <h4 className="font-semibold">Correct Answer:</h4>
+                         <div className="p-3 rounded-md border bg-green-500/10 border-green-500">
+                           <p>{correctAnswer?.text}</p>
+                         </div>
+                       </div>
+                     )}
+                     <div>
+                        <Badge variant="secondary">{question.topic}</Badge>
+                     </div>
+                  </AccordionContent>
+                </AccordionItem>
+              );
+            })}
+          </Accordion>
+        </CardContent>
+      </Card>
+
     </div>
   );
 }

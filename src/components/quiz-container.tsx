@@ -1,10 +1,12 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import type { Question, UserAnswerMap } from '@/lib/types';
 import QuestionCard from './question-card';
 import { Progress } from './ui/progress';
-import { Timer } from 'lucide-react';
+import { Button } from './ui/button';
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from './ui/alert-dialog';
+import { Timer, ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
 
 type QuizContainerProps = {
   questions: Question[];
@@ -14,18 +16,31 @@ type QuizContainerProps = {
 
 export default function QuizContainer({ questions, onQuizFinish, timeLimit }: QuizContainerProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [score, setScore] = useState(0);
   const [userAnswers, setUserAnswers] = useState<UserAnswerMap>({});
-  const [isAnswered, setIsAnswered] = useState(false);
   const [timeLeft, setTimeLeft] = useState(timeLimit);
   
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const halfwayPoint = timeLimit / 2;
+
+  const handleSubmit = useCallback(() => {
+    let finalScore = 0;
+    questions.forEach(q => {
+      if (userAnswers[q.id] === q.correctOptionId) {
+        finalScore++;
+      }
+    });
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+    }
+    onQuizFinish(finalScore, userAnswers);
+  }, [questions, userAnswers, onQuizFinish]);
 
   useEffect(() => {
     timerRef.current = setInterval(() => {
       setTimeLeft(prevTime => {
         if (prevTime <= 1) {
           clearInterval(timerRef.current!);
+          handleSubmit();
           return 0;
         }
         return prevTime - 1;
@@ -37,34 +52,25 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
         clearInterval(timerRef.current);
       }
     };
-  }, []);
-
-  useEffect(() => {
-    if (timeLeft === 0) {
-      onQuizFinish(score, userAnswers);
-    }
-  }, [timeLeft, onQuizFinish, score, userAnswers]);
+  }, [handleSubmit]);
 
 
   const handleAnswer = (selectedOptionId: string) => {
-    const currentQuestion = questions[currentQuestionIndex];
-    const isCorrect = currentQuestion.correctOptionId === selectedOptionId;
-    if (isCorrect) {
-      setScore((prev) => prev + 1);
-    }
     setUserAnswers((prev) => ({
       ...prev,
-      [currentQuestion.id]: selectedOptionId,
+      [questions[currentQuestionIndex].id]: selectedOptionId,
     }));
-    setIsAnswered(true);
   };
 
   const handleNext = () => {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex((prev) => prev + 1);
-      setIsAnswered(false);
-    } else {
-      onQuizFinish(score, userAnswers);
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex((prev) => prev - 1);
     }
   };
   
@@ -75,30 +81,64 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
   };
 
   const currentQuestion = questions[currentQuestionIndex];
-  const progressValue = ((currentQuestionIndex + (isAnswered ? 1 : 0)) / questions.length) * 100;
+  const progressValue = ((currentQuestionIndex + 1) / questions.length) * 100;
+  const showSubmitButton = currentQuestionIndex === questions.length - 1 || timeLeft <= halfwayPoint;
 
   return (
     <div className="max-w-3xl mx-auto mt-8">
       <div className="mb-6 space-y-4">
         <div className="flex justify-between items-center text-sm font-semibold">
-          <p className="text-primary">Score: {score}</p>
+           <p className="text-sm text-muted-foreground text-center">
+            Question {currentQuestionIndex + 1} of {questions.length}
+          </p>
           <div className="flex items-center gap-2 text-destructive">
             <Timer className="h-5 w-5" />
             <span>{formatTime(timeLeft)}</span>
           </div>
         </div>
-         <p className="text-sm text-muted-foreground text-center">
-            Question {currentQuestionIndex + 1} of {questions.length}
-          </p>
         <Progress value={progressValue} className="w-full h-2" />
       </div>
+
       <QuestionCard
         question={currentQuestion}
         onAnswer={handleAnswer}
-        onNext={handleNext}
-        isAnswered={isAnswered}
         userAnswer={userAnswers[currentQuestion.id]}
       />
+
+      <div className="mt-6 flex justify-between items-center">
+        <Button onClick={handlePrevious} disabled={currentQuestionIndex === 0} variant="outline">
+          <ArrowLeft className="mr-2 h-4 w-4" />
+          Previous
+        </Button>
+
+        {showSubmitButton ? (
+           <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="destructive" size="lg">
+                <CheckCircle className="mr-2 h-5 w-5" />
+                Submit Quiz
+              </Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+                <AlertDialogDescription>
+                  This action will end your quiz and your score will be calculated. You cannot undo this.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogCancel>Cancel</AlertDialogCancel>
+                <AlertDialogAction onClick={handleSubmit}>Submit</AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+        ) : (
+          <Button onClick={handleNext} disabled={currentQuestionIndex === questions.length - 1}>
+            Next
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        )}
+      </div>
     </div>
   );
 }
