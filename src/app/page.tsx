@@ -68,9 +68,9 @@ export default function Home() {
       default:
         return (
           <div className="flex justify-center items-center py-10">
-            <Card className="w-full max-w-2xl shadow-lg">
+            <Card className="w-full max-w-2xl bg-card/80 backdrop-blur-sm border-primary/20 shadow-primary/20 shadow-lg">
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl font-headline">Welcome to the GST 112 Quiz!</CardTitle>
+                <CardTitle className="text-3xl font-headline text-shadow-glow">Welcome to The Web3 Wizard's Academy!</CardTitle>
                 <CardDescription>
                   Test your knowledge. Total questions available: {totalAvailableQuestions}.
                 </CardDescription>
@@ -122,7 +122,7 @@ export default function Home() {
                 </div>
               </CardContent>
               <CardFooter className="flex justify-center">
-                <Button size="lg" onClick={handleQuizStart} className="shadow-md" disabled={totalAvailableQuestions < 45}>
+                <Button size="lg" onClick={handleQuizStart} className="shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-shadow" disabled={totalAvailableQuestions < 45}>
                   <PlayCircle className="mr-2 h-5 w-5" />
                   Start Quiz
                 </Button>
@@ -134,7 +134,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen">
       <Header />
       <main className="container mx-auto px-4 pb-12">
         {renderContent()}

@@ -51,7 +51,7 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
     });
 
     const result = await getAiSuggestions({
-      examName: 'GST 112 Quiz',
+      examName: "The Web3 Wizard's Academy Quiz",
       userAnswers: formattedUserAnswers,
       correctAnswers,
       topics,
@@ -72,7 +72,7 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
 
   return (
     <div className="max-w-3xl mx-auto py-8">
-      <Card className="shadow-lg animate-in fade-in-50 duration-500 mb-8">
+      <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-primary/20 shadow-lg animate-in fade-in-50 duration-500 mb-8">
         <CardHeader className="text-center items-center">
           <Award className="h-16 w-16 text-primary mb-4" />
           <CardTitle className="text-3xl font-headline">Quiz Completed!</CardTitle>
@@ -93,7 +93,7 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
             <RefreshCw className="mr-2 h-4 w-4" />
             Try Again
           </Button>
-          <Button onClick={handleGetSuggestions} disabled={isLoading} className="shadow-md">
+          <Button onClick={handleGetSuggestions} disabled={isLoading} className="shadow-md shadow-primary/30 hover:shadow-primary/50 transition-shadow">
             {isLoading ? (
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
             ) : (
@@ -106,14 +106,14 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
       
       {isLoading && (
          <div className="flex justify-center items-center mt-6">
-            <Card className="w-full p-8 text-center animate-pulse">
+            <Card className="w-full p-8 text-center animate-pulse bg-card/80 backdrop-blur-sm border-primary/20">
                 <p className="text-muted-foreground">Analyzing your results with AI...</p>
             </Card>
          </div>
       )}
 
       {aiSuggestion && (
-        <Alert className="mt-8 animate-in fade-in-50 duration-500 shadow-md">
+        <Alert className="mt-8 animate-in fade-in-50 duration-500 shadow-md bg-card/80 backdrop-blur-sm border-primary/20">
           <BrainCircuit className="h-4 w-4" />
           <AlertTitle className="font-headline text-xl">AI-Powered Study Plan</AlertTitle>
           <AlertDescription className="mt-4 space-y-4">
@@ -130,7 +130,7 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
         </Alert>
       )}
 
-      <Card className="shadow-lg animate-in fade-in-50 duration-500 mt-8">
+      <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-primary/20 shadow-lg animate-in fade-in-50 duration-500 mt-8">
         <CardHeader>
           <CardTitle>Question Review</CardTitle>
           <CardDescription>Review your answers below.</CardDescription>
