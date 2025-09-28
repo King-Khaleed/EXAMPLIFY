@@ -19,6 +19,7 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<UserAnswerMap>({});
   const [timeLeft, setTimeLeft] = useState(timeLimit);
+  const [isSubmitDialogOpen, setIsSubmitDialogOpen] = useState(false);
   
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const halfwayPoint = timeLimit / 2;
@@ -88,7 +89,7 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
   const unansweredQuestions = questions.length - Object.keys(userAnswers).length;
 
   const SubmitButton = ({ isEarly }: { isEarly?: boolean }) => (
-    <AlertDialog>
+    <AlertDialog open={isSubmitDialogOpen} onOpenChange={setIsSubmitDialogOpen}>
       <AlertDialogTrigger asChild>
         <Button variant="destructive" size="lg" className={cn(isEarly && "animate-pulse")}>
           <CheckCircle className="mr-2 h-5 w-5" />
