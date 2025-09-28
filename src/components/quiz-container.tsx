@@ -91,7 +91,7 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
   const SubmitButton = ({ isEarly }: { isEarly?: boolean }) => (
     <AlertDialog open={isSubmitDialogOpen} onOpenChange={setIsSubmitDialogOpen}>
       <AlertDialogTrigger asChild>
-        <Button variant="destructive" size="lg" className={cn(isEarly && "animate-pulse")}>
+        <Button variant="destructive" size="lg">
           <CheckCircle className="mr-2 h-5 w-5" />
           Submit Quiz
         </Button>
