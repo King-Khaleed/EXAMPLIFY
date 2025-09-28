@@ -48,7 +48,7 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
     });
 
     const result = await getAiSuggestions({
-      examName: 'GST 111 Quiz',
+      examName: 'GST 112 Quiz',
       userAnswers: formattedUserAnswers,
       correctAnswers,
       topics,

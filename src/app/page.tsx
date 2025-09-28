@@ -57,7 +57,7 @@ export default function Home() {
           <div className="flex justify-center items-center py-10">
             <Card className="w-full max-w-lg shadow-lg">
               <CardHeader className="text-center">
-                <CardTitle className="text-2xl font-headline">Welcome to the GST 111 Quiz!</CardTitle>
+                <CardTitle className="text-2xl font-headline">Welcome to the GST 112 Quiz!</CardTitle>
                 <CardDescription>Test your knowledge. You will be presented with {questions.length} questions.</CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col items-center gap-6">
