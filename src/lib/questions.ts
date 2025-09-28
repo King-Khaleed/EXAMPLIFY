@@ -592,7 +592,7 @@ export const questions: Question[] = [
   },
   {
     id: 'gst112-q48',
-    text: 'What was the main purpose of the "Investment and Infrastructural Development in Nigeria" during the colonial era?',
+    text: "What was the main purpose of the 'Investment and Infrastructural Development in Nigeria' during the colonial era?",
     options: [
       {
         id: 'gst112-q48o1',
@@ -2017,7 +2017,7 @@ export const questions: Question[] = [
   },
   {
     id: 'gst112-q163',
-    text: 'What was the primary purpose of the "Investment and Infrastructural Development in Nigeria" during the colonial era?',
+    text: "What was the primary purpose of the 'Investment and Infrastructural Development in Nigeria' during the colonial era?",
     options: [
       {
         id: 'gst112-q163o1',

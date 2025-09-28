@@ -6,7 +6,8 @@ import QuestionCard from './question-card';
 import { Progress } from './ui/progress';
 import { Button } from './ui/button';
 import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, AlertDialogTrigger } from './ui/alert-dialog';
-import { Timer, ArrowLeft, ArrowRight, CheckCircle } from 'lucide-react';
+import { Timer, ArrowLeft, ArrowRight, CheckCircle, AlarmClockCheck } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 type QuizContainerProps = {
   questions: Question[];
@@ -82,7 +83,33 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
 
   const currentQuestion = questions[currentQuestionIndex];
   const progressValue = ((currentQuestionIndex + 1) / questions.length) * 100;
-  const showSubmitButton = currentQuestionIndex === questions.length - 1 || timeLeft <= halfwayPoint;
+  const isLastQuestion = currentQuestionIndex === questions.length - 1;
+  const isTimeHalfway = timeLeft <= halfwayPoint;
+  const unansweredQuestions = questions.length - Object.keys(userAnswers).length;
+
+  const SubmitButton = ({ isEarly }: { isEarly?: boolean }) => (
+    <AlertDialog>
+      <AlertDialogTrigger asChild>
+        <Button variant="destructive" size="lg" className={cn(isEarly && "animate-pulse")}>
+          <CheckCircle className="mr-2 h-5 w-5" />
+          Submit Quiz
+        </Button>
+      </AlertDialogTrigger>
+      <AlertDialogContent>
+        <AlertDialogHeader>
+          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+          <AlertDialogDescription>
+            {unansweredQuestions > 0 ? `You have ${unansweredQuestions} unanswered questions. ` : ''}
+            This action will end your quiz and your score will be calculated. You cannot undo this.
+          </AlertDialogDescription>
+        </AlertDialogHeader>
+        <AlertDialogFooter>
+          <AlertDialogCancel>Cancel</AlertDialogCancel>
+          <AlertDialogAction onClick={handleSubmit}>Submit</AlertDialogAction>
+        </AlertDialogFooter>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
 
   return (
     <div className="max-w-3xl mx-auto mt-4 md:mt-8">
@@ -91,12 +118,18 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
            <p className="text-xs md:text-sm text-muted-foreground text-center">
             Question {currentQuestionIndex + 1} of {questions.length}
           </p>
-          <div className="flex items-center gap-2 text-destructive">
+          <div className={cn("flex items-center gap-2", timeLeft <= 60 ? "text-destructive font-bold animate-pulse" : "text-muted-foreground")}>
             <Timer className="h-5 w-5" />
             <span>{formatTime(timeLeft)}</span>
           </div>
         </div>
         <Progress value={progressValue} className="w-full h-2" />
+        {isTimeHalfway && !isLastQuestion && (
+            <div className="flex items-center justify-center gap-2 text-xs text-primary/80 p-2 bg-primary/10 rounded-lg">
+                <AlarmClockCheck className="h-4 w-4" />
+                <span>Time is halfway - you can now submit early.</span>
+            </div>
+        )}
       </div>
 
       <QuestionCard
@@ -105,39 +138,24 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
         userAnswer={userAnswers[currentQuestion.id]}
       />
 
-      <div className="mt-6 flex justify-between items-center">
+      <div className="mt-6 flex justify-between items-center gap-2">
         <Button onClick={handlePrevious} disabled={currentQuestionIndex === 0} variant="outline" size="lg" className="min-w-[120px]">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Previous
         </Button>
+        
+        <div className="flex items-center gap-2">
+            {isTimeHalfway && !isLastQuestion && <SubmitButton isEarly />}
 
-        {showSubmitButton ? (
-           <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <Button variant="destructive" size="lg">
-                <CheckCircle className="mr-2 h-5 w-5" />
-                Submit Quiz
+            {isLastQuestion ? (
+              <SubmitButton />
+            ) : (
+              <Button onClick={handleNext} disabled={isLastQuestion} size="lg" className="min-w-[120px]">
+                Next
+                <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
-                <AlertDialogDescription>
-                  This action will end your quiz and your score will be calculated. You cannot undo this.
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogCancel>Cancel</AlertDialogCancel>
-                <AlertDialogAction onClick={handleSubmit}>Submit</AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
-        ) : (
-          <Button onClick={handleNext} disabled={currentQuestionIndex === questions.length - 1} size="lg" className="min-w-[120px]">
-            Next
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        )}
+            )}
+        </div>
       </div>
     </div>
   );
