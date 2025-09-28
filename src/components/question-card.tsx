@@ -31,7 +31,7 @@ export default function QuestionCard({ question, onAnswer, userAnswer }: Questio
     <Card className="shadow-lg transition-all animate-in fade-in-50 duration-500">
       <CardHeader>
         <CardDescription className="font-semibold text-primary">{question.topic}</CardDescription>
-        <CardTitle className="font-headline text-2xl leading-relaxed">{question.text}</CardTitle>
+        <CardTitle className="font-headline text-xl md:text-2xl leading-relaxed">{question.text}</CardTitle>
       </CardHeader>
       <CardContent>
         <RadioGroup
@@ -44,11 +44,11 @@ export default function QuestionCard({ question, onAnswer, userAnswer }: Questio
                 key={option.id}
                 className={cn(
                   'flex items-center space-x-3 rounded-lg border p-4 transition-all',
-                  'hover:bg-accent/50 has-[input:checked]:border-primary'
+                  'hover:bg-accent/50 has-[input:checked]:border-primary min-h-[44px]'
                 )}
               >
                 <RadioGroupItem value={option.id} id={option.id} />
-                <Label htmlFor={option.id} className="text-base flex-1 cursor-pointer">{option.text}</Label>
+                <Label htmlFor={option.id} className="text-sm md:text-base flex-1 cursor-pointer">{option.text}</Label>
               </div>
             ))}
           </div>

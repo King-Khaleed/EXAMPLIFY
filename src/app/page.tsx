@@ -67,17 +67,17 @@ export default function Home() {
       case 'not-started':
       default:
         return (
-          <div className="flex justify-center items-center py-10">
+          <div className="flex justify-center items-center py-4 md:py-10">
             <Card className="w-full max-w-2xl bg-card/80 backdrop-blur-sm border-primary/20 shadow-primary/20 shadow-lg">
               <CardHeader className="text-center">
-                <CardTitle className="text-3xl font-headline text-shadow-glow">Welcome to The Web3 Wizard's Academy!</CardTitle>
+                <CardTitle className="text-2xl md:text-3xl font-headline text-shadow-glow">Welcome to The Web3 Wizard's Academy!</CardTitle>
                 <CardDescription>
                   Test your knowledge. Total questions available: {totalAvailableQuestions}.
                 </CardDescription>
               </CardHeader>
-              <CardContent className="flex flex-col sm:flex-row justify-center items-center gap-8">
+              <CardContent className="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-8">
                  <div className="flex flex-col items-center gap-3 w-full max-w-xs">
-                  <Label htmlFor="time-select" className="flex items-center gap-2 text-base">
+                  <Label htmlFor="time-select" className="flex items-center gap-2 text-sm md:text-base">
                     <Clock className="h-5 w-5" />
                     Choose Exam Duration
                   </Label>
@@ -96,7 +96,7 @@ export default function Home() {
                   </Select>
                 </div>
                 <div className="flex flex-col items-center gap-3 w-full max-w-xs">
-                  <Label htmlFor="questions-select" className="flex items-center gap-2 text-base">
+                  <Label htmlFor="questions-select" className="flex items-center gap-2 text-sm md:text-base">
                     <Hash className="h-5 w-5" />
                     Number of Questions
                   </Label>

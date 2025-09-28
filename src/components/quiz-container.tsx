@@ -85,10 +85,10 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
   const showSubmitButton = currentQuestionIndex === questions.length - 1 || timeLeft <= halfwayPoint;
 
   return (
-    <div className="max-w-3xl mx-auto mt-8">
+    <div className="max-w-3xl mx-auto mt-4 md:mt-8">
       <div className="mb-6 space-y-4">
         <div className="flex justify-between items-center text-sm font-semibold">
-           <p className="text-sm text-muted-foreground text-center">
+           <p className="text-xs md:text-sm text-muted-foreground text-center">
             Question {currentQuestionIndex + 1} of {questions.length}
           </p>
           <div className="flex items-center gap-2 text-destructive">
@@ -106,7 +106,7 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
       />
 
       <div className="mt-6 flex justify-between items-center">
-        <Button onClick={handlePrevious} disabled={currentQuestionIndex === 0} variant="outline">
+        <Button onClick={handlePrevious} disabled={currentQuestionIndex === 0} variant="outline" size="lg" className="min-w-[120px]">
           <ArrowLeft className="mr-2 h-4 w-4" />
           Previous
         </Button>
@@ -133,7 +133,7 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
             </AlertDialogContent>
           </AlertDialog>
         ) : (
-          <Button onClick={handleNext} disabled={currentQuestionIndex === questions.length - 1}>
+          <Button onClick={handleNext} disabled={currentQuestionIndex === questions.length - 1} size="lg" className="min-w-[120px]">
             Next
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

@@ -74,14 +74,14 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
     <div className="max-w-3xl mx-auto py-8">
       <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-primary/20 shadow-lg animate-in fade-in-50 duration-500 mb-8">
         <CardHeader className="text-center items-center">
-          <Award className="h-16 w-16 text-primary mb-4" />
-          <CardTitle className="text-3xl font-headline">Quiz Completed!</CardTitle>
+          <Award className="h-12 w-12 md:h-16 md:w-16 text-primary mb-4" />
+          <CardTitle className="text-2xl md:text-3xl font-headline">Quiz Completed!</CardTitle>
           <CardDescription>Here's how you performed.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="text-center">
-            <p className="text-lg text-muted-foreground">Your Score</p>
-            <p className="text-6xl font-bold text-foreground">{score}<span className="text-3xl text-muted-foreground">/{totalQuestions}</span></p>
+            <p className="text-md md:text-lg text-muted-foreground">Your Score</p>
+            <p className="text-5xl md:text-6xl font-bold text-foreground">{score}<span className="text-2xl md:text-3xl text-muted-foreground">/{totalQuestions}</span></p>
           </div>
           <div>
             <Progress value={percentage} className="h-3" />
@@ -89,11 +89,11 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
           </div>
         </CardContent>
         <CardFooter className="flex-col sm:flex-row justify-center gap-4">
-          <Button onClick={onRestart} variant="outline" className="shadow-sm">
+          <Button onClick={onRestart} variant="outline" className="shadow-sm w-full sm:w-auto">
             <RefreshCw className="mr-2 h-4 w-4" />
             Try Again
           </Button>
-          <Button onClick={handleGetSuggestions} disabled={isLoading} className="shadow-md shadow-primary/30 hover:shadow-primary/50 transition-shadow">
+          <Button onClick={handleGetSuggestions} disabled={isLoading} className="shadow-md shadow-primary/30 hover:shadow-primary/50 transition-shadow w-full sm:w-auto">
             {isLoading ? (
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
             ) : (
@@ -115,14 +115,14 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
       {aiSuggestion && (
         <Alert className="mt-8 animate-in fade-in-50 duration-500 shadow-md bg-card/80 backdrop-blur-sm border-primary/20">
           <BrainCircuit className="h-4 w-4" />
-          <AlertTitle className="font-headline text-xl">AI-Powered Study Plan</AlertTitle>
+          <AlertTitle className="font-headline text-lg md:text-xl">AI-Powered Study Plan</AlertTitle>
           <AlertDescription className="mt-4 space-y-4">
-            <p className="text-base">{aiSuggestion.reasoning}</p>
+            <p className="text-sm md:text-base">{aiSuggestion.reasoning}</p>
             <div>
               <h4 className="font-semibold text-foreground mb-2">Focus Areas:</h4>
               <ul className="list-disc list-inside space-y-1">
                 {aiSuggestion.suggestedAreas.map((area, index) => (
-                  <li key={index} className="text-base">{area}</li>
+                  <li key={index} className="text-sm md:text-base">{area}</li>
                 ))}
               </ul>
             </div>
@@ -132,7 +132,7 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
 
       <Card className="bg-card/80 backdrop-blur-sm border-primary/20 shadow-primary/20 shadow-lg animate-in fade-in-50 duration-500 mt-8">
         <CardHeader>
-          <CardTitle>Question Review</CardTitle>
+          <CardTitle className="text-xl md:text-2xl">Question Review</CardTitle>
           <CardDescription>Review your answers below.</CardDescription>
         </CardHeader>
         <CardContent>
@@ -152,21 +152,21 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
                       ) : (
                         <XCircle className="h-5 w-5 text-destructive flex-shrink-0" />
                       )}
-                      <span className="text-left flex-1">{question.text}</span>
+                      <span className="text-left flex-1 text-sm md:text-base">{question.text}</span>
                     </div>
                   </AccordionTrigger>
                   <AccordionContent className="px-4 space-y-4">
                     <div className="space-y-2">
-                       <h4 className="font-semibold">Your Answer:</h4>
+                       <h4 className="font-semibold text-sm">Your Answer:</h4>
                        <div className={cn("p-3 rounded-md border", !isCorrect ? "bg-destructive/10 border-destructive" : "bg-green-500/10 border-green-500")}>
-                         <p>{userAnswer?.text || <span className="text-muted-foreground italic">No answer</span>}</p>
+                         <p className="text-sm md:text-base">{userAnswer?.text || <span className="text-muted-foreground italic">No answer</span>}</p>
                        </div>
                     </div>
                      {!isCorrect && (
                        <div className="space-y-2">
-                         <h4 className="font-semibold">Correct Answer:</h4>
+                         <h4 className="font-semibold text-sm">Correct Answer:</h4>
                          <div className="p-3 rounded-md border bg-green-500/10 border-green-500">
-                           <p>{correctAnswer?.text}</p>
+                           <p className="text-sm md:text-base">{correctAnswer?.text}</p>
                          </div>
                        </div>
                      )}
