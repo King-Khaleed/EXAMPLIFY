@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Progress } from './ui/progress';
 import { Award, BrainCircuit, RefreshCw, Loader2, CheckCircle2, XCircle } from 'lucide-react';
 import { getAiSuggestions } from '@/app/actions';
-import type { UserAnswerMap, Question } from '@/lib/types';
+import type { UserAnswerMap, Question, Course } from '@/lib/types';
 import { useToast } from '@/hooks/use-toast';
 import { Alert, AlertDescription, AlertTitle } from './ui/alert';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from './ui/accordion';
@@ -19,6 +19,7 @@ type QuizResultsProps = {
   userAnswers: UserAnswerMap;
   questions: Question[];
   onRestart: () => void;
+  course: Course;
 };
 
 type AiSuggestion = {
@@ -26,7 +27,7 @@ type AiSuggestion = {
   reasoning: string;
 };
 
-export default function QuizResults({ score, totalQuestions, userAnswers, questions, onRestart }: QuizResultsProps) {
+export default function QuizResults({ score, totalQuestions, userAnswers, questions, onRestart, course }: QuizResultsProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [aiSuggestion, setAiSuggestion] = useState<AiSuggestion | null>(null);
   const { toast } = useToast();
@@ -51,7 +52,7 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
     });
 
     const result = await getAiSuggestions({
-      examName: "The Web3 Wizard's Academy Quiz",
+      examName: `${course.code} - ${course.title}`,
       userAnswers: formattedUserAnswers,
       correctAnswers,
       topics,
@@ -76,7 +77,7 @@ export default function QuizResults({ score, totalQuestions, userAnswers, questi
         <CardHeader className="text-center items-center">
           <Award className="h-12 w-12 md:h-16 md:w-16 text-primary mb-4" />
           <CardTitle className="text-2xl md:text-3xl font-headline">Quiz Completed!</CardTitle>
-          <CardDescription>Here's how you performed.</CardDescription>
+          <CardDescription>Here's how you performed on the {course.code} exam.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="text-center">

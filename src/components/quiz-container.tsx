@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef, useCallback } from 'react';
-import type { Question, UserAnswerMap } from '@/lib/types';
+import type { Question, UserAnswerMap, Course } from '@/lib/types';
 import QuestionCard from './question-card';
 import { Progress } from './ui/progress';
 import { Button } from './ui/button';
@@ -13,9 +13,10 @@ type QuizContainerProps = {
   questions: Question[];
   onQuizFinish: (score: number, userAnswers: UserAnswerMap) => void;
   timeLimit: number; // in seconds
+  course: Course;
 };
 
-export default function QuizContainer({ questions, onQuizFinish, timeLimit }: QuizContainerProps) {
+export default function QuizContainer({ questions, onQuizFinish, timeLimit, course }: QuizContainerProps) {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [userAnswers, setUserAnswers] = useState<UserAnswerMap>({});
   const [timeLeft, setTimeLeft] = useState(timeLimit);
@@ -91,7 +92,7 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
   const SubmitButton = ({ isEarly }: { isEarly?: boolean }) => (
     <AlertDialog open={isSubmitDialogOpen} onOpenChange={setIsSubmitDialogOpen}>
       <AlertDialogTrigger asChild>
-        <Button variant="destructive" size="lg">
+        <Button variant="destructive" size="lg" className={cn(isEarly && 'animate-pulse')}>
           <CheckCircle className="mr-2 h-5 w-5" />
           Submit Quiz
         </Button>
@@ -119,7 +120,7 @@ export default function QuizContainer({ questions, onQuizFinish, timeLimit }: Qu
            <p className="text-xs md:text-sm text-muted-foreground text-center">
             Question {currentQuestionIndex + 1} of {questions.length}
           </p>
-          <div className={cn("flex items-center gap-2", timeLeft <= 60 ? "text-destructive font-bold animate-pulse" : "text-muted-foreground")}>
+          <div className={cn("flex items-center gap-2", timeLeft <= 60 ? "text-destructive font-bold" : "text-muted-foreground")}>
             <Timer className="h-5 w-5" />
             <span>{formatTime(timeLeft)}</span>
           </div>

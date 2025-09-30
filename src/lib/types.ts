@@ -14,3 +14,11 @@ export type Question = {
 export type UserAnswerMap = {
   [questionId: string]: string; // questionId -> selectedOptionId
 };
+
+export type Course = {
+  code: string;
+  title: string;
+  questions: Question[];
+  totalQuestions: number;
+  minQuestions: number;
+};
