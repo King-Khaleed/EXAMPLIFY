@@ -25,14 +25,16 @@ export default function Home() {
 
   useEffect(() => {
     // Reset numQuestions if it exceeds the new course's total questions
-    if (numQuestions > selectedCourse.totalQuestions) {
-      setNumQuestions(selectedCourse.totalQuestions);
-    } else if (numQuestions < selectedCourse.minQuestions) {
+    // or if the new course has 0 questions
+    if (numQuestions > selectedCourse.totalQuestions || selectedCourse.totalQuestions === 0) {
+      setNumQuestions(selectedCourse.totalQuestions > 0 ? selectedCourse.minQuestions : 0);
+    } else if (numQuestions < selectedCourse.minQuestions && selectedCourse.totalQuestions > 0) {
       setNumQuestions(selectedCourse.minQuestions);
     }
   }, [selectedCourse, numQuestions]);
 
   const handleQuizStart = () => {
+    if (selectedCourse.totalQuestions < selectedCourse.minQuestions) return;
     // Shuffle all questions from the selected course
     const shuffled = [...allQuestions].sort(() => Math.random() - 0.5);
     // Select the desired number of questions
@@ -117,53 +119,55 @@ export default function Home() {
                     </Select>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
-                    <div className="flex flex-col items-center gap-3 w-full">
-                        <Label htmlFor="time-select" className="flex items-center gap-2 text-sm md:text-base">
-                        <Clock className="h-5 w-5" />
-                        Choose Exam Duration
-                        </Label>
-                        <Select
-                        defaultValue={String(timeLimit / 60)}
-                        onValueChange={(value) => setTimeLimit(Number(value) * 60)}
-                        >
-                        <SelectTrigger id="time-select" className="w-full">
-                            <SelectValue placeholder="Select time" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            <SelectItem value="15">15 Minutes</SelectItem>
-                            <SelectItem value="30">30 Minutes</SelectItem>
-                            <SelectItem value="45">45 Minutes</SelectItem>
-                        </SelectContent>
-                        </Select>
-                    </div>
+                {totalAvailableQuestions < selectedCourse.minQuestions ? (
+                  <div className="text-center text-primary/80 bg-primary/10 p-3 rounded-md">
+                    <p>Questions for {selectedCourse.code} are being added. Please check back soon or select another course.</p>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
+                      <div className="flex flex-col items-center gap-3 w-full">
+                          <Label htmlFor="time-select" className="flex items-center gap-2 text-sm md:text-base">
+                          <Clock className="h-5 w-5" />
+                          Choose Exam Duration
+                          </Label>
+                          <Select
+                          defaultValue={String(timeLimit / 60)}
+                          onValueChange={(value) => setTimeLimit(Number(value) * 60)}
+                          >
+                          <SelectTrigger id="time-select" className="w-full">
+                              <SelectValue placeholder="Select time" />
+                          </SelectTrigger>
+                          <SelectContent>
+                              <SelectItem value="15">15 Minutes</SelectItem>
+                              <SelectItem value="30">30 Minutes</SelectItem>
+                              <SelectItem value="45">45 Minutes</SelectItem>
+                          </SelectContent>
+                          </Select>
+                      </div>
 
-                    <div className="flex flex-col items-center gap-3 w-full">
-                        <Label htmlFor="questions-select" className="flex items-center gap-2 text-sm md:text-base">
-                        <Hash className="h-5 w-5" />
-                        Number of Questions
-                        </Label>
-                        <Select
-                        value={String(numQuestions)}
-                        onValueChange={(value) => setNumQuestions(Number(value))}
-                        >
-                        <SelectTrigger id="questions-select" className="w-full">
-                            <SelectValue placeholder="Select quantity" />
-                        </SelectTrigger>
-                        <SelectContent>
-                            {totalAvailableQuestions < selectedCourse.minQuestions ? (
-                            <SelectItem value={String(totalAvailableQuestions)} disabled>Not enough questions (min: {selectedCourse.minQuestions})</SelectItem>
-                            ) : (
-                            questionOptions.map(qty => (
-                                <SelectItem key={qty} value={String(qty)}>
-                                {qty === totalAvailableQuestions ? `All (${qty})` : `${qty} Questions`}
-                                </SelectItem>
-                            ))
-                            )}
-                        </SelectContent>
-                        </Select>
-                    </div>
-                </div>
+                      <div className="flex flex-col items-center gap-3 w-full">
+                          <Label htmlFor="questions-select" className="flex items-center gap-2 text-sm md:text-base">
+                          <Hash className="h-5 w-5" />
+                          Number of Questions
+                          </Label>
+                          <Select
+                          value={String(numQuestions)}
+                          onValueChange={(value) => setNumQuestions(Number(value))}
+                          >
+                          <SelectTrigger id="questions-select" className="w-full">
+                              <SelectValue placeholder="Select quantity" />
+                          </SelectTrigger>
+                          <SelectContent>
+                              {questionOptions.map(qty => (
+                                  <SelectItem key={qty} value={String(qty)}>
+                                  {qty === totalAvailableQuestions ? `All (${qty})` : `${qty} Questions`}
+                                  </SelectItem>
+                              ))}
+                          </SelectContent>
+                          </Select>
+                      </div>
+                  </div>
+                )}
               </CardContent>
               <CardFooter className="flex justify-center">
                 <Button size="lg" onClick={handleQuizStart} className="shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-shadow" disabled={totalAvailableQuestions < selectedCourse.minQuestions}>

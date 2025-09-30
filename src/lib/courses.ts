@@ -1,5 +1,6 @@
 import type { Course } from './types';
 import { questions as gst112Questions } from './questions';
+import { questions as csc102Questions } from './csc102-questions';
 
 /**
  * To add a new course in the future:
@@ -14,6 +15,13 @@ export const courses: Course[] = [
     title: 'Nigerian Peoples and Culture',
     questions: gst112Questions,
     totalQuestions: gst112Questions.length,
+    minQuestions: 45,
+  },
+  {
+    code: 'CSC 102',
+    title: 'Introduction to Problem Solving And Python Programming',
+    questions: csc102Questions,
+    totalQuestions: csc102Questions.length,
     minQuestions: 45,
   },
   // Add new courses here in the future
