@@ -1,5 +1,6 @@
 import { BookOpenCheck } from 'lucide-react';
 import Link from 'next/link';
+import { ModeToggle } from './mode-toggle';
 
 export function Header() {
   return (
@@ -11,10 +12,11 @@ export function Header() {
             The Web3 Wizard's Academy
             </h1>
         </Link>
-        <nav>
+        <nav className="flex items-center gap-4">
             <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">
                 About
             </Link>
+            <ModeToggle />
         </nav>
       </div>
     </header>
