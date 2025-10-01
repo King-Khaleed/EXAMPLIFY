@@ -13,6 +13,9 @@ export function Header() {
             </h1>
         </Link>
         <nav className="flex items-center gap-4">
+            <Link href="/how-to-use" className="text-sm font-medium hover:text-primary transition-colors">
+                How to Use
+            </Link>
             <Link href="/about" className="text-sm font-medium hover:text-primary transition-colors">
                 About
             </Link>
