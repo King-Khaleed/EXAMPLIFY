@@ -2,6 +2,7 @@ import type { Course } from './types';
 import { questions as gst112Questions } from './questions';
 import { questions as csc102Questions } from './csc102-questions';
 import { questions as phy102Questions } from './phy102-questions';
+import { questions as pol101Questions } from './pol101-questions';
 
 /**
  * To add a new course in the future:
@@ -30,6 +31,13 @@ export const courses: Course[] = [
     title: 'Electricity, Magnetism & Modern Physics',
     questions: phy102Questions,
     totalQuestions: phy102Questions.length,
+    minQuestions: 45,
+  },
+  {
+    code: 'POL 101',
+    title: 'Introduction to Political Science',
+    questions: pol101Questions,
+    totalQuestions: pol101Questions.length,
     minQuestions: 45,
   },
   // Add new courses here in the future
