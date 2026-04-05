@@ -7,6 +7,9 @@ import { questions as mth101Questions } from './mth101-questions';
 import { questions as agg101Questions } from './agg101-questions';
 import { questions as chm101Questions } from './chm101-questions';
 import { questions as csc111Questions } from './csc111-questions';
+import { questions as csc201Questions } from './csc201-questions';
+import { questions as gst212Questions } from './gst212-questions';
+import { questions as csc223Questions } from './csc223-questions';
 
 
 /**
@@ -73,5 +76,27 @@ export const courses: Course[] = [
     totalQuestions: csc111Questions.length,
     minQuestions: 45,
   },
+  {
+    code: 'CSC 201',
+    title: 'Object-Oriented Programming',
+    questions: csc201Questions,
+    totalQuestions: csc201Questions.length,
+    minQuestions: 45,
+  },
+  {
+    code: 'CSC 223',
+    title: 'Discrete Structures',
+    questions: csc223Questions,
+    totalQuestions: csc223Questions.length,
+    minQuestions: 45,
+  },
+  {
+    code: 'GST 212',
+    title: 'PHILOSOPHY',
+    questions: gst212Questions,
+    totalQuestions: gst212Questions.length,
+    minQuestions: 45,
+  },
+
   // Add new courses here in the future
 ];
