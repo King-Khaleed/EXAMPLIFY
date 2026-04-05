@@ -10,6 +10,7 @@ import { questions as csc111Questions } from './csc111-questions';
 import { questions as csc201Questions } from './csc201-questions';
 import { questions as gst212Questions } from './gst212-questions';
 import { questions as csc223Questions } from './csc223-questions';
+import { questions as csc227Questions } from './csc227-questions';
 
 
 /**
@@ -95,6 +96,13 @@ export const courses: Course[] = [
     title: 'PHILOSOPHY',
     questions: gst212Questions,
     totalQuestions: gst212Questions.length,
+    minQuestions: 45,
+  },
+  {
+    code: 'CSC 227',
+    title: 'IFT',
+    questions: csc227Questions,
+    totalQuestions: csc227Questions.length,
     minQuestions: 45,
   },
 
