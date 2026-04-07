@@ -11,6 +11,7 @@ import { questions as csc201Questions } from './csc201-questions';
 import { questions as gst212Questions } from './gst212-questions';
 import { questions as csc223Questions } from './csc223-questions';
 import { questions as csc227Questions } from './csc227-questions';
+import { questions as bio107Questions } from './bio107-questions';
 
 
 /**
@@ -103,6 +104,13 @@ export const courses: Course[] = [
     title: 'IFT',
     questions: csc227Questions,
     totalQuestions: csc227Questions.length,
+    minQuestions: 45,
+  },
+  {
+    code: 'BIO 107',
+    title: 'BIO 107',
+    questions: bio107Questions,
+    totalQuestions: bio107Questions.length,
     minQuestions: 45,
   },
 
