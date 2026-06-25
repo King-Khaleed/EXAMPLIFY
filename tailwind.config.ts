@@ -10,19 +10,21 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: {
+        DEFAULT: '1.25rem',
+        sm: '1.5rem',
+        md: '2rem',
+        lg: '3rem',
+      },
       screens: {
-        "2xl": "1400px",
+        '2xl': '1400px',
       },
     },
     extend: {
       fontFamily: {
-        body: ['PT Sans', 'sans-serif'],
-        headline: ['Orbitron', 'sans-serif'],
-        code: ['monospace'],
-      },
-      textShadow: {
-        glow: '0 0 8px hsl(var(--primary) / 0.7)',
+        heading: ['Fraunces', 'Georgia', 'serif'],
+        body: ['DM Sans', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -73,20 +75,12 @@ export default {
       },
       keyframes: {
         'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
       },
       animation: {
@@ -97,13 +91,5 @@ export default {
   },
   plugins: [
     require('tailwindcss-animate'),
-    function ({ addUtilities, theme }: { addUtilities: any, theme: any }) {
-      const newUtilities = {
-        '.text-shadow-glow': {
-          textShadow: theme('textShadow.glow'),
-        },
-      }
-      addUtilities(newUtilities, ['responsive', 'hover'])
-    }
   ],
 } satisfies Config;

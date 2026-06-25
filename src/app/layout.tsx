@@ -4,8 +4,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: "The Web3 Wizard's Academy",
-  description: 'A CBT website for exam preparation with multiple-choice questions.',
+  title: "Examplify — Master Your Exams",
+  description: 'A premium CBT platform for exam preparation with AI-powered insights.',
 };
 
 export default function RootLayout({
@@ -18,18 +18,19 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body>
+      <body className="font-body antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="font-body antialiased bg-white dark:bg-transparent dark:bg-gradient-to-br dark:from-[#1a083a] dark:to-[#0f172a]">
-            {children}
-          </div>
+          {children}
           <Toaster />
         </ThemeProvider>
       </body>

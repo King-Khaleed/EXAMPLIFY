@@ -7,25 +7,22 @@ import QuizContainer from '@/components/quiz-container';
 import QuizResults from '@/components/quiz-results';
 import { Header } from '@/components/header';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { PlayCircle, Clock, Hash, Book } from 'lucide-react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from '@/components/ui/label';
+import { Play, Timer, Sparkles, BookOpen, BrainCircuit, ShieldCheck, TrendingUp, ArrowRight, GraduationCap } from 'lucide-react';
 
 export default function Home() {
   const [quizState, setQuizState] = useState<'not-started' | 'in-progress' | 'finished'>('not-started');
   const [userAnswers, setUserAnswers] = useState<UserAnswerMap>({});
   const [score, setScore] = useState(0);
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [timeLimit, setTimeLimit] = useState(15 * 60); // Default to 15 minutes in seconds
-  const [numQuestions, setNumQuestions] = useState(45); // Default to 45 questions
+  const [timeLimit, setTimeLimit] = useState(15 * 60);
+  const [numQuestions, setNumQuestions] = useState(45);
   const [selectedCourse, setSelectedCourse] = useState<Course>(courses[0]);
 
   const allQuestions = selectedCourse.questions;
 
   useEffect(() => {
-    // Reset numQuestions if it exceeds the new course's total questions
-    // or if the new course has 0 questions
     if (numQuestions > selectedCourse.totalQuestions || selectedCourse.totalQuestions === 0) {
       setNumQuestions(selectedCourse.totalQuestions > 0 ? selectedCourse.minQuestions : 0);
     } else if (numQuestions < selectedCourse.minQuestions && selectedCourse.totalQuestions > 0) {
@@ -35,9 +32,7 @@ export default function Home() {
 
   const handleQuizStart = () => {
     if (selectedCourse.totalQuestions < selectedCourse.minQuestions) return;
-    // Shuffle all questions from the selected course
     const shuffled = [...allQuestions].sort(() => Math.random() - 0.5);
-    // Select the desired number of questions
     const selectedQuestions = shuffled.slice(0, numQuestions);
     setQuestions(selectedQuestions);
     setQuizState('in-progress');
@@ -62,131 +57,223 @@ export default function Home() {
     .filter((qty, index, self) => self.indexOf(qty) === index)
     .sort((a,b) => a - b);
 
-
   const handleCourseChange = (courseCode: string) => {
     const course = courses.find(c => c.code === courseCode);
-    if (course) {
-      setSelectedCourse(course);
-    }
+    if (course) setSelectedCourse(course);
   };
 
-  const renderContent = () => {
-    switch (quizState) {
-      case 'in-progress':
-        return <QuizContainer questions={questions} onQuizFinish={handleQuizFinish} timeLimit={timeLimit} course={selectedCourse} />;
-      case 'finished':
-        return (
-          <QuizResults
-            score={score}
-            totalQuestions={questions.length}
-            userAnswers={userAnswers}
-            questions={questions}
-            onRestart={handleRestart}
-            course={selectedCourse}
-          />
-        );
-      case 'not-started':
-      default:
-        return (
-          <div className="flex justify-center items-center py-4 md:py-10">
-            <Card className="w-full max-w-4xl bg-card/80 backdrop-blur-sm border-primary/20 shadow-primary/20 shadow-lg">
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl md:text-3xl font-headline text-shadow-glow">Welcome to The Web3 Wizard's Academy!</CardTitle>
-                <CardDescription>
-                  Select your course and prepare for your exam.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="flex flex-col gap-6 p-6">
-                <div className="flex flex-col items-center gap-3 w-full">
-                    <Label htmlFor="course-select" className="flex items-center gap-2 text-sm md:text-base">
-                        <Book className="h-5 w-5" />
-                        Choose Your Course
-                    </Label>
-                    <Select
-                        defaultValue={selectedCourse.code}
-                        onValueChange={handleCourseChange}
-                    >
-                        <SelectTrigger id="course-select" className="w-full max-w-lg mx-auto">
-                        <SelectValue placeholder="Select course" />
-                        </SelectTrigger>
-                        <SelectContent>
-                        {courses.map(course => (
-                            <SelectItem key={course.code} value={course.code}>
-                            {course.code} - {course.title} ({course.totalQuestions} questions)
-                            </SelectItem>
-                        ))}
-                        </SelectContent>
-                    </Select>
-                </div>
+  const features = [
+    { icon: BrainCircuit, title: 'AI-Powered Insights', desc: 'Smart analysis of your performance with personalized study recommendations.' },
+    { icon: ShieldCheck, title: 'Exam-Ready Questions', desc: 'Curated question banks covering key topics across multiple courses.' },
+    { icon: TrendingUp, title: 'Track Your Progress', desc: 'Detailed results and review to identify strengths and areas for growth.' },
+    { icon: Sparkles, title: 'Adaptive Testing', desc: 'Customizable time limits and question counts tailored to your needs.' },
+  ];
 
-                {totalAvailableQuestions < selectedCourse.minQuestions ? (
-                  <div className="text-center text-primary/80 bg-primary/10 p-3 rounded-md">
-                    <p>Questions for {selectedCourse.code} are being added. Please check back soon or select another course.</p>
-                  </div>
-                ) : (
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-start">
-                      <div className="flex flex-col items-center gap-3 w-full">
-                          <Label htmlFor="time-select" className="flex items-center gap-2 text-sm md:text-base">
-                          <Clock className="h-5 w-5" />
-                          Choose Exam Duration
-                          </Label>
-                          <Select
-                          defaultValue={String(timeLimit / 60)}
-                          onValueChange={(value) => setTimeLimit(Number(value) * 60)}
-                          >
-                          <SelectTrigger id="time-select" className="w-full">
-                              <SelectValue placeholder="Select time" />
-                          </SelectTrigger>
-                          <SelectContent>
-                              <SelectItem value="15">15 Minutes</SelectItem>
-                              <SelectItem value="30">30 Minutes</SelectItem>
-                              <SelectItem value="45">45 Minutes</SelectItem>
-                          </SelectContent>
-                          </Select>
-                      </div>
-
-                      <div className="flex flex-col items-center gap-3 w-full">
-                          <Label htmlFor="questions-select" className="flex items-center gap-2 text-sm md:text-base">
-                          <Hash className="h-5 w-5" />
-                          Number of Questions
-                          </Label>
-                          <Select
-                          value={String(numQuestions)}
-                          onValueChange={(value) => setNumQuestions(Number(value))}
-                          >
-                          <SelectTrigger id="questions-select" className="w-full">
-                              <SelectValue placeholder="Select quantity" />
-                          </SelectTrigger>
-                          <SelectContent>
-                              {questionOptions.map(qty => (
-                                  <SelectItem key={qty} value={String(qty)}>
-                                  {qty === totalAvailableQuestions ? `All (${qty})` : `${qty} Questions`}
-                                  </SelectItem>
-                              ))}
-                          </SelectContent>
-                          </Select>
-                      </div>
-                  </div>
-                )}
-              </CardContent>
-              <CardFooter className="flex justify-center">
-                <Button size="lg" onClick={handleQuizStart} className="shadow-lg shadow-primary/30 hover:shadow-primary/50 transition-shadow" disabled={totalAvailableQuestions < selectedCourse.minQuestions}>
-                  <PlayCircle className="mr-2 h-5 w-5" />
-                  Start Quiz
-                </Button>
-              </CardFooter>
-            </Card>
-          </div>
-        );
-    }
-  };
-
-  return (
+  const renderNotStarted = () => (
     <div className="min-h-screen">
       <Header />
-      <main className="container mx-auto px-4 pb-12">
-        {renderContent()}
+
+      <section className="relative pt-28 md:pt-36 pb-16 md:pb-24 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute top-1/3 right-1/4 w-[300px] h-[300px] bg-accent/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="container mx-auto text-center relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs md:text-sm font-medium mb-6 slide-down">
+            <Sparkles className="size-3.5" />
+            Premium Exam Preparation Platform
+          </div>
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-balance leading-[1.1] mb-5">
+            Master Your Exams with{' '}
+            <span className="gold-text">Confidence</span>
+          </h1>
+          <p className="max-w-2xl mx-auto text-base md:text-lg text-muted-foreground leading-relaxed mb-8">
+            Prepare smarter with expertly crafted questions, real-time progress tracking,
+            and AI-driven insights designed to help you succeed.
+          </p>
+
+          <div className="flex flex-wrap items-center justify-center gap-3 mb-16">
+            <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-card/50 border border-border/50 text-sm text-muted-foreground">
+              <BookOpen className="size-4 text-primary" />
+              <span>{courses.reduce((sum, c) => sum + c.totalQuestions, 0)}+ Questions</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-lg bg-card/50 border border-border/50 text-sm text-muted-foreground">
+              <GraduationCap className="size-4 text-primary" />
+              <span>{courses.filter(c => c.totalQuestions > 0).length} Courses</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-16 md:pb-24">
+        <div className="container mx-auto">
+          <div className="max-w-5xl mx-auto">
+            <div className="card-glass rounded-2xl p-6 md:p-8 lg:p-10">
+              <div className="text-center mb-8">
+                <h2 className="font-heading text-2xl md:text-3xl font-semibold mb-2">Configure Your Quiz</h2>
+                <p className="text-muted-foreground">Customize your exam experience</p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
+                <div className="space-y-3">
+                  <Label className="flex items-center gap-2 text-sm font-medium">
+                    <BookOpen className="size-4 text-primary" />
+                    Course
+                  </Label>
+                  <Select
+                    defaultValue={selectedCourse.code}
+                    onValueChange={handleCourseChange}
+                  >
+                    <SelectTrigger className="w-full h-12 bg-background/50 border-border/60 focus:ring-primary/30">
+                      <SelectValue placeholder="Select course" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {courses.map(course => (
+                        <SelectItem key={course.code} value={course.code}>
+                          {course.code} — {course.title}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  {selectedCourse.totalQuestions > 0 && (
+                    <p className="text-xs text-muted-foreground px-1">
+                      {selectedCourse.totalQuestions} questions available
+                    </p>
+                  )}
+                </div>
+
+                <div className="space-y-3">
+                  <Label className="flex items-center gap-2 text-sm font-medium">
+                    <Timer className="size-4 text-primary" />
+                    Duration
+                  </Label>
+                  <Select
+                    defaultValue={String(timeLimit / 60)}
+                    onValueChange={(value) => setTimeLimit(Number(value) * 60)}
+                  >
+                    <SelectTrigger className="w-full h-12 bg-background/50 border-border/60 focus:ring-primary/30">
+                      <SelectValue placeholder="Select time" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="15">15 Minutes</SelectItem>
+                      <SelectItem value="30">30 Minutes</SelectItem>
+                      <SelectItem value="45">45 Minutes</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+
+                <div className="space-y-3">
+                  <Label className="flex items-center gap-2 text-sm font-medium">
+                    <BrainCircuit className="size-4 text-primary" />
+                    Questions
+                  </Label>
+                  <Select
+                    value={String(numQuestions)}
+                    onValueChange={(value) => setNumQuestions(Number(value))}
+                  >
+                    <SelectTrigger className="w-full h-12 bg-background/50 border-border/60 focus:ring-primary/30">
+                      <SelectValue placeholder="Select quantity" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {questionOptions.map(qty => (
+                        <SelectItem key={qty} value={String(qty)}>
+                          {qty === totalAvailableQuestions ? `All Questions (${qty})` : `${qty} Questions`}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+
+              {totalAvailableQuestions < selectedCourse.minQuestions ? (
+                <div className="text-center p-4 rounded-xl bg-primary/5 border border-primary/10">
+                  <p className="text-primary/80 text-sm">
+                    Questions for {selectedCourse.code} are being added. Please check back soon or select another course.
+                  </p>
+                </div>
+              ) : (
+                <div className="text-center">
+                  <Button
+                    size="lg"
+                    onClick={handleQuizStart}
+                    className="h-13 px-8 text-base font-medium shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 group"
+                  >
+                    <Play className="mr-2 size-4 group-hover:translate-x-0.5 transition-transform" />
+                    Start Exam
+                  </Button>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="pb-24">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="font-heading text-2xl md:text-3xl font-semibold mb-3">
+              Why <span className="gold-text">Examplify</span>?
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              Everything you need to prepare for your exams in one place.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto">
+            {features.map((feature, i) => (
+              <div
+                key={feature.title}
+                className="card-glass rounded-xl p-6 group hover:border-primary/20 transition-all duration-300"
+                style={{ animationDelay: `${i * 100}ms` }}
+              >
+                <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <feature.icon className="size-5 text-primary" />
+                </div>
+                <h3 className="font-heading font-semibold text-base mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-border/50 py-8">
+        <div className="container mx-auto text-center text-sm text-muted-foreground">
+          <p>&copy; {new Date().getFullYear()} Examplify. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+  );
+
+  const renderInProgress = () => (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main className="container mx-auto px-4 pt-24 pb-12">
+        <QuizContainer questions={questions} onQuizFinish={handleQuizFinish} timeLimit={timeLimit} course={selectedCourse} />
       </main>
     </div>
+  );
+
+  const renderFinished = () => (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main className="container mx-auto px-4 pt-24 pb-12">
+        <QuizResults
+          score={score}
+          totalQuestions={questions.length}
+          userAnswers={userAnswers}
+          questions={questions}
+          onRestart={handleRestart}
+          course={selectedCourse}
+        />
+      </main>
+    </div>
+  );
+
+  return (
+    <>
+      {quizState === 'not-started' && renderNotStarted()}
+      {quizState === 'in-progress' && renderInProgress()}
+      {quizState === 'finished' && renderFinished()}
+    </>
   );
 }
